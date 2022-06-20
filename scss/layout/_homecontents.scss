@@ -1,0 +1,50 @@
+.sec-banner {
+    position: relative;
+    background: url(../../images/homepage/bannerosf-1280.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: auto;
+    text-align: center;
+}
+
+.sec-banner__texts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: $text-white;
+    h1 {
+        font-family: $Lato;
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+    p {
+        font-family: $Lato;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+
+.our-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:baseline;
+    background-color: $bckg-home-sec1;
+    color: $text-white;
+}
+
+.skill {
+    margin: .5rem;
+    background-color: blue;
+    * {
+        margin: 1rem;
+    }
+    h4 {
+        font-weight: 700;
+    }
+    p{
+        font-weight: 400;
+    }
+}

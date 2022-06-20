@@ -2,6 +2,7 @@
 
 $clr-primary      : #ffffff;
 $clr-secondary    : #262a33;
+    $clr-sec-light   :lighten($clr-secondary, 7%);
 $clr-tertiary     : #f1edea;
 $clr-accent       : #84bc22;
 
@@ -10,7 +11,11 @@ $border-gray      : #a2a09e;
 $border-beige     : #e8e2d6;
 $border-header    : #f3f0ea;
 
-$text-black       : #45413e;
+$bckg-home-sec1   : #45413e;
+
+$text-black       : #333333;
+$text-anthracite  : #45413e;
+$text-white       : #ffffff;
 
 
 /* --- FONTS --------------------------------- */
@@ -21,3 +26,10 @@ $serif            : "Times New Roman", serif;
 $sans-serif       : "Helvetica", "Arial", sans-serif;
 
 $Lato             : "Lato", $sans-serif;
+
+
+/* --- BREAKPOINTS --------------------------- */
+
+/*   @media screen and (min-width: 768px) and (max-width: 1280px)
+     @media screen and (min-width: 1280px)
+*/

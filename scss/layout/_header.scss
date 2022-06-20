@@ -1,8 +1,9 @@
 header {
-    background-color: $clr-secondary;
+    background-color: $clr-primary;
 }
 
-.navbar {
+.homebar {
+    position: static;
     width: 100%;
     height: 65px;
     background-color: $clr-primary;
@@ -13,6 +14,9 @@ header {
         width: 50%;
         height: 65px;
         z-index: 1;
+    }
+    @media screen and (min-width: 1280px){
+        width: 500px;
     }
 }
 
@@ -51,26 +55,23 @@ header {
     font-weight: 400;
 }
 
-.menu-btn {
-    position: absolute;
-    top: 12.5px;
-    left: 12.5px;
-    &:hover{
-        nav {
-            display:contents;
-        }
-    }
-}
-
-nav {
+#check {
     display: none;
 }
 
-.nav__lv1,
-.nav__lv2,
-.nav__lv3 {
-    display: flex;
-    flex-direction: column;
+.checkbtn {
+    cursor: pointer;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 12.5px;
+    left: calc(12.5px + 1%);
+    font-size: 40px;
+}
+
+nav {
+    background-color: $clr-secondary;
 }
 
 .nav__lv1__items,
@@ -78,19 +79,25 @@ nav {
 .nav__lv3__items {
     display: inline-block;
     margin: 2px auto;
-    padding: 15px 200px 15px 15px;
+    padding: 15px 0 15px calc(15px + 1%);
+    width:100%;
     color: $clr-primary;
     font-family: $Lato;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
     text-decoration: none;
+    transition: background-color .2s ease-in-out;
+    &:hover,
+    &:active {
+        background-color: $clr-sec-light;
+    }
 }
 
 .nav__lv2__items {
-    font-weight: 700;
-    padding-left: 22px;
+    padding-left: calc(25px + 1%);
 }
 
 .nav__lv3__items {
-    padding-left: 29px;
+    font-weight: 400;
+    padding-left: calc(35px + 1%);
 }

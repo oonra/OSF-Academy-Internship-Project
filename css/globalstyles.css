@@ -319,35 +319,41 @@ template {
 
 /* --- COLORS -------------------------------- */
 /* --- FONTS --------------------------------- */
-.icon {
-  color: #a2a09e;
-  font-size: 40px;
+/* --- BREAKPOINTS --------------------------- */
+/*   @media screen and (min-width: 768px) and (max-width: 1280px)
+     @media screen and (min-width: 1280px)
+*/
+* {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
-.icon-btns {
-  width: 44px;
-  width: 44px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+.cover-banner {
+  background-size: cover;
+  width: 100%;
+  min-height: 350px;
 }
-
 header {
-  background-color: #262a33;
+  background-color: #ffffff;
 }
 
-.navbar {
+.homebar {
+  position: static;
   width: 100%;
   height: 65px;
   background-color: #ffffff;
 }
-.navbar a {
+.homebar a {
   position: absolute;
   left: 25%;
   min-width: 160px;
   width: 50%;
   height: 65px;
   z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  .homebar {
+    width: 500px;
+  }
 }
 
 .brandtitle {
@@ -385,24 +391,23 @@ header {
   font-weight: 400;
 }
 
-.menu-btn {
-  position: absolute;
-  top: 12.5px;
-  left: 12.5px;
-}
-.menu-btn:hover nav {
-  display: contents;
-}
-
-nav {
+#check {
   display: none;
 }
 
-.nav__lv1,
-.nav__lv2,
-.nav__lv3 {
-  display: flex;
-  flex-direction: column;
+.checkbtn {
+  cursor: pointer;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 12.5px;
+  left: calc(12.5px + 1%);
+  font-size: 40px;
+}
+
+nav {
+  background-color: #262a33;
 }
 
 .nav__lv1__items,
@@ -410,21 +415,82 @@ nav {
 .nav__lv3__items {
   display: inline-block;
   margin: 2px auto;
-  padding: 15px 200px 15px 15px;
+  padding: 15px 0 15px calc(15px + 1%);
+  width: 100%;
   color: #ffffff;
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.nav__lv1__items:hover, .nav__lv1__items:active,
+.nav__lv2__items:hover,
+.nav__lv2__items:active,
+.nav__lv3__items:hover,
+.nav__lv3__items:active {
+  background-color: #353b47;
 }
 
 .nav__lv2__items {
-  font-weight: 700;
-  padding-left: 22px;
+  padding-left: calc(25px + 1%);
 }
 
 .nav__lv3__items {
-  padding-left: 29px;
+  font-weight: 400;
+  padding-left: calc(35px + 1%);
+}
+
+.sec-banner {
+  position: relative;
+  background: url(../../images/homepage/bannerosf-1280.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  text-align: center;
+}
+
+.sec-banner__texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: #ffffff;
+}
+.sec-banner__texts h1 {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.sec-banner__texts p {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.our-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #45413e;
+  color: #ffffff;
+}
+
+.skill {
+  margin: 0.5rem;
+  float: left;
+}
+.skill * {
+  margin: 1rem;
+}
+.skill h4 {
+  font-weight: 700;
+}
+.skill p {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=globalstyles.css.map */

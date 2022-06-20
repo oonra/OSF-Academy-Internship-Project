@@ -1,0 +1,7 @@
+.cover-banner {
+    background-size: cover;
+    width: 100%;
+    min-height: 350px;
+    @media screen and (max-width: 768px) {
+    }
+}
