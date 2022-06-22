@@ -35,6 +35,10 @@ header {
 .brandtitle__logo {
     width: 63px;
     height: 65px;
+    transition: transform 0.6s ease-in-out;
+    @include min768 {
+        transform: rotateY(360deg);
+    }
 }
 
 .brandtitle__OSF {
@@ -104,10 +108,14 @@ nav {
 }
 
 .nav__lv2__items {
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: calc(25px + 1%);
 }
 
 .nav__lv3__items {
     font-weight: 400;
-    padding-left: calc(35px + 1%);
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    padding-left: calc(25px + 1%);
 }

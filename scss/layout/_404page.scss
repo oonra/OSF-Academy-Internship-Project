@@ -1,0 +1,39 @@
+.container-404 {
+    background-color: $bckg-404;
+    padding: 4vw;
+}
+
+.inpage-404 {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-image: url(../../images/p404/Exclamation_Mark_Inside_An_Octahedron._Attribute_as_Elegant_Themes_from_Flaticon.com.png);
+    background-repeat: no-repeat;
+    background-position-x: -55px;
+    background-position-y: center;
+    border-radius: 5px;
+    padding: 4vw;
+    hyphens: auto;
+    background-color: $clr-primary;
+    transition: all 0.2s ease-in-out;
+
+    @include min768 {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+    }
+    @include min1280 {
+        gap: 5rem;
+        padding: 6vw;
+    }
+}
+
+.p404__sorrytext > h4,
+.p404__sorrytext > p {
+    margin: 1rem;
+    line-height: 1.5rem;
+}
+
+.p404__sorrytext__goback {
+    margin: 2.75rem 1rem;
+}

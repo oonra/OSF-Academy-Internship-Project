@@ -319,10 +319,29 @@ template {
 
 /* --- COLORS -------------------------------- */
 /* --- FONTS --------------------------------- */
+/* --- GLOBAL -------------------------------- */
 * {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
+.inpage-nav {
+  margin: 1.5rem 1rem auto 1rem;
+  text-align: center;
+}
+
+.inpage-nav__slash {
+  margin: 1rem;
+  color: #a2a09e;
+}
+
+.inpage-title h1 {
+  margin: 1rem auto 3.5rem auto;
+  text-align: center;
+  font-size: 3rem;
+  color: #45413e;
+}
+
+/* --- FOOTER -------------------------------- */
 .footer-hdng {
   font-weight: 700;
   font-size: 13px;
@@ -332,6 +351,42 @@ footer p,
 footer li {
   font-weight: 400;
   font-size: 13px;
+}
+
+/* --- 404 PAGE ------------------------------ */
+.container-404 a {
+  text-decoration: none;
+  color: #84bc22;
+  transition: color 0.1s ease-in-out;
+}
+.container-404 a:hover {
+  color: #262a33;
+}
+
+.p404__ooopstext {
+  font-size: 5rem;
+  color: #84bc22;
+  text-align: center;
+  transition: font-size 0.6s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .p404__ooopstext {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p404__ooopstext {
+    font-size: 7rem;
+  }
+}
+
+.p404__sorrytext > h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.p404__sorrytext > p {
+  color: #555555;
 }
 
 .cover-banner {
@@ -380,6 +435,12 @@ header {
 .brandtitle__logo {
   width: 63px;
   height: 65px;
+  transition: transform 0.6s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .brandtitle__logo {
+    transform: rotateY(360deg);
+  }
 }
 
 .brandtitle__OSF {
@@ -453,12 +514,16 @@ nav {
 }
 
 .nav__lv2__items {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: calc(25px + 1%);
 }
 
 .nav__lv3__items {
   font-weight: 400;
-  padding-left: calc(35px + 1%);
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  padding-left: calc(25px + 1%);
 }
 
 footer {
@@ -469,6 +534,49 @@ footer {
 
 footer > div {
   margin-bottom: 1.75rem;
+}
+
+.container-404 {
+  background-color: #f1edea;
+  padding: 4vw;
+}
+
+.inpage-404 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-image: url(../../images/p404/Exclamation_Mark_Inside_An_Octahedron._Attribute_as_Elegant_Themes_from_Flaticon.com.png);
+  background-repeat: no-repeat;
+  background-position-x: -55px;
+  background-position-y: center;
+  border-radius: 5px;
+  padding: 4vw;
+  hyphens: auto;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .inpage-404 {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .inpage-404 {
+    gap: 5rem;
+    padding: 6vw;
+  }
+}
+
+.p404__sorrytext > h4,
+.p404__sorrytext > p {
+  margin: 1rem;
+  line-height: 1.5rem;
+}
+
+.p404__sorrytext__goback {
+  margin: 2.75rem 1rem;
 }
 
 /* --- BANNER OSF THEME ---------------------- */
@@ -497,7 +605,7 @@ footer > div {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  transition: font-size 0.1s ease-in-out;
+  transition: font-size 0.6s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .sec-banner__texts h1 {
@@ -513,7 +621,7 @@ footer > div {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
-  transition: font-size 0.2s ease-in-out;
+  transition: font-size 0.6s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .sec-banner__texts p {
@@ -547,6 +655,7 @@ footer > div {
   justify-content: center;
   align-items: flex-start;
   margin: 1.75rem 1rem;
+  transition: margin 0.6s ease-in-out;
 }
 .skill * {
   margin: 0.75rem;
@@ -561,6 +670,11 @@ footer > div {
   hyphens: auto;
 }
 @media screen and (min-width: 768px) {
+  .skill {
+    margin: 3.25rem 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .skill {
     margin: 3.25rem 2rem;
   }
