@@ -334,11 +334,23 @@ template {
   color: #a2a09e;
 }
 
+.inpage-title {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 5%;
+  margin-bottom: 2rem;
+}
+
 .inpage-title h1 {
-  margin: 1rem auto 3.5rem auto;
+  margin: 0.75rem auto;
   text-align: center;
   font-size: 3rem;
   color: #45413e;
+}
+
+.inpage-title__border {
+  height: 40px;
+  border-bottom: 2px solid #e5e2df;
 }
 
 /* --- FOOTER -------------------------------- */
@@ -351,6 +363,17 @@ footer p,
 footer li {
   font-weight: 400;
   font-size: 13px;
+  list-style-type: none;
+}
+
+footer a {
+  padding: 1rem auto;
+  color: #45413e;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+footer a:hover {
+  color: #84bc22;
 }
 
 /* --- 404 PAGE ------------------------------ */
@@ -527,13 +550,63 @@ nav {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: calc(1rem + 1%);
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-footer > div {
+@media screen and (min-width: 768px) {
+  footer:nth-child(1) {
+    flex-basis: 20%;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer:nth-child(2) {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer:nth-child(3) {
+    flex-basis: 20%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer:nth-child(4) {
+    flex-basis: 10%;
+  }
+}
+
+footer > div,
+.ftr-copyright {
   margin-bottom: 1.75rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    height: 200px;
+    flex-wrap: wrap;
+  }
 }
 
 .container-404 {
@@ -549,11 +622,11 @@ footer > div {
   background-repeat: no-repeat;
   background-position-x: -55px;
   background-position-y: center;
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-radius: 7px;
   padding: 4vw;
   hyphens: auto;
-  background-color: #ffffff;
-  transition: all 0.2s ease-in-out;
+  transition: gap 0.6s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .inpage-404 {

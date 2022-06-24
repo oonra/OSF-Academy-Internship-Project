@@ -14,11 +14,23 @@
     color: $border-gray;
 }
 
+.inpage-title {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 5%;
+    margin-bottom: 2rem;
+}
+
 .inpage-title h1 {
-    margin: 1rem auto 3.5rem auto;
+    margin: .75rem auto;
     text-align: center;
     font-size: 3rem;
     color: $text-anthracite;
+}
+
+.inpage-title__border {
+    height: 40px;
+    border-bottom: 2px solid $clr-lines;
 }
 
 /* --- FOOTER -------------------------------- */
@@ -32,6 +44,17 @@ footer p,
 footer li {
     font-weight: 400;
     font-size: 13px;
+    list-style-type: none;
+}
+
+footer a {
+    padding: 1rem auto;
+    color: $text-anthracite;
+    text-decoration: none;
+    transition: color 0.1s ease-in-out;
+    &:hover {
+        color: $clr-accent;
+    }
 }
 
 /* --- 404 PAGE ------------------------------ */
