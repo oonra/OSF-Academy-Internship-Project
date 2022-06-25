@@ -1,4 +1,18 @@
-@mixin min768 {
+/*  
+    --------------------------------------------------------------------------------------------------
+    The breakpoint mixins below were included to the parts of the code where custom css and scss
+    were used. Bootstrap's default breakpoints were also used in the code, too, with some little
+    adjustments respectful to the project requirements.
+
+    - Default "xl" breakpoint of Bootstrap has been changed from min-width:1200px to min-width:1280px.
+    - Default "md" breakpoint of Bootstrap was already assigned to min-width:768px by default.
+
+    These changes have been made inside the main scss file of the project, "../globalstyles.scss",
+    where all of bootstrap and scss files in the project are imported to.
+    --------------------------------------------------------------------------------------------------
+*/
+
+@mixin min768 {  // md
     @media screen and (min-width: 768px){
         @content;
     }
@@ -10,7 +24,7 @@
     }
 }
 
-@mixin min1280 {
+@mixin min1280 {  // xl
     @media screen and (min-width: 1280px){
         @content;
     }

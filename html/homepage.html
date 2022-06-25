@@ -1,170 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <title>OSF Academy</title>
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="../css/globalstyles.css">
-    </head>
-    <body>
-        <header>
-            <div class="toggle">
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>OSF Academy</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/globalstyles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md bg-light p-0">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="material-symbols-outlined icon toggle-btn">menu</span>
-                </label>
-            </div>
-            <div class="homebutton">
-                <a href="homepage.html"></a>
-                <div class="brandtitle">
-                    <img src="../images/header/OSF-logo.png" alt="OSF Academy" class="brandtitle__logo">
-                    <h2 class="brandtitle__OSF">OSF</h2>
-                    <h2 class="brandtitle__Academy">Academy</h2>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav__lv1">
-                    <li><a href="404page.html" class="nav__lv1__items">SERVICES</a></li>
-                        <ul class="nav__lv2">
-                            <li><a href="404page.html" class="nav__lv2__items">PRODUCT CATEGORIES</a></li>
-                                <ul class="nav__lv3">
-                                    <li><a href="404page.html" class="nav__lv3__items">Accesories</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Alcohol</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Art</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Books</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Drinks</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Electronics</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Flowers & Plants</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Food</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Gadgets</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Garden</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Grocery</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Home</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Jewelry</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Kids & Baby</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Men's Fashion</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Mobile</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Motorcycles</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Movies</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Music</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Office</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Pets</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Romantic</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Sports</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Toys</a></li>
+                </button> <!-- /.navbar-toggler button -->
+
+                <div class="homebutton">
+                    <a href="homepage.html"></a>
+                    <div class="brandtitle">
+                        <img src="../images/header/OSF-logo.png" alt="OSF Academy" class="brandtitle__logo">
+                        <h2 class="brandtitle__OSF">OSF</h2>
+                        <h2 class="brandtitle__Academy">Academy</h2>
+                    </div>
+                </div> <!-- /.homebutton -->
+
+                <div class="collapse navbar-collapse navcontainer" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 navlist">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn nav__dropbtn-1 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
-                            <li><a href="#" class="nav__lv2__items">SALE</a></li>
-                                <ul>
-                                    <li><a href="404page.html" class="nav__lv3__items">Accesories</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Alcohol</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Art</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Books</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Drinks</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Electronics</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Flowers & Plants</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Food</a></li>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">COMPANY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">LIBRARY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn nav__dropbtn-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">ES</a></li>
+                                    <li><a class="dropdown-item" href="#">DE</a></li>
+                                    <li><a class="dropdown-item" href="#">TR</a></li>
                                 </ul>
-                        </ul>
-                    <li><a href="404page.html" class="nav__lv1__items">COMPANY</a></li>
-                    <li><a href="404page.html" class="nav__lv1__items">LIBRARY</a></li>
-                    <li><a href="404page.html" class="nav__lv1__items">CONTACT US</a></li>
-                </ul>
-            </nav>
-            <div class="header__icons">
-                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn nav__dropbtn-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">&#36;USD</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">&#128;EUR</a></li>
+                                    <li><a class="dropdown-item" href="#">&#163;GBP</a></li>
+                                    <li><a class="dropdown-item" href="#">&#165;YEN</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div> <!-- /.navbar-collapse -->
+            </div> <!-- container-fluid -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="sec-banner">
+            <div class="sec-banner__texts">
+                <h1>Banner OSF Theme</h1>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section class="sec-banner">
-                <div class="sec-banner__texts">
-                    <h1>Banner OSF Theme</h1>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-                </div>
-            </section>
-
-            <section class="our-skills">
-                <div class="skill">
-                    <img src="../images/homepage/skills/Delivery_Packages_On_A_Trolley._Attribute_as_Freepik_from_Flaticon.com.png" alt="Delivery">
-                    <div class="skill__texts">
-                        <h4>FOCUS</h4>
-                        <p>Our unwavering focus on superior service delivery and building next generation competencies</p>   
-                    </div>
-
-                </div>
-                <div class="skill">
-                    <img src="../images/homepage/skills/Triangular_Arrows_Sign_For_Recycle._Attribute_as_Freepik_from_Flaticon.com.png" alt="Recycling">
-                    <div class="skill__texts">
-                        <h4>METHOD</h4>
-                        <p>A standardized methodology designed to deliver measurable business results and predictable costs</p>
-                    </div>
+        <section class="sec-benefits">
+            <div class="custom-container">
+                <div class="our-benefits">
                     
-                </div>
-                <div class="skill">
-                    <img src="../images/homepage/skills/Clipboard_Verification_Symbol._Attribute_as_Freepik_from_Flaticon.com.png" alt="Checkboard">
-                    <div class="skill__texts">
-                        <h4>KNOWLEDGE</h4>
-                        <p>A highly skilled, proactive workforce that reliably improves each client’s ROI while mitigating their business risk</p>
+                    <div class="benefit">
+                        <img src="../images/homepage/skills/Delivery_Packages_On_A_Trolley._Attribute_as_Freepik_from_Flaticon.com.png"
+                            alt="Delivery">
+                        <div class="skill__texts">
+                            <h4>FOCUS</h4>
+                            <p>Our unwavering focus on superior service delivery and building next generation competencies</p>
+                        </div>
                     </div>
-                    
-                </div>
-            </section>
-        </main>
 
-        <footer>
-            <div class="ftr-copy-cntct">
-                <div class="ftr-copyright">
-                    <p>&copy; Copyright 2022.<br> All rights reserved.</p> <!--current year needs js-->
+                    <div class="benefit">
+                        <img src="../images/homepage/skills/Triangular_Arrows_Sign_For_Recycle._Attribute_as_Freepik_from_Flaticon.com.png"
+                            alt="Recycling">
+                        <div class="skill__texts">
+                            <h4>METHOD</h4>
+                            <p>A standardized methodology designed to deliver measurable business results and predictable costs
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <img src="../images/homepage/skills/Clipboard_Verification_Symbol._Attribute_as_Freepik_from_Flaticon.com.png"
+                            alt="Checkboard">
+                        <div class="skill__texts">
+                            <h4>KNOWLEDGE</h4>
+                            <p>A highly skilled, proactive workforce that reliably improves each client’s ROI while mitigating
+                                their business risk</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="ftr-contact">
-                    <h6 class="footer-hdng">CONTACT</h6>
-                    <p>Headquarters:<br> Blvd. des Galeries, Bur 530 Québec, Québec G2K 2H6</p>
-                    <p>contact@osf-global.com</p> <!--will pop-up email app when clicked-->
-                    <p>+1 (888) 548-4344</p>
-                </div>
             </div>
-            <div class="ftr-categories">
-                <h6 class="footer-hdng">CATEGORIES</h6>
-                <ul>
-                    <li><a href="">Alcohol</a></li>
-                    <li><a href="">Art</a></li>
-                    <li><a href="">Books</a></li>
-                    <li><a href="">Drink</a></li>
-                    <li><a href="">Electronics</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Jewelry</a></li>
-                    <li><a href="">Kids & Baby</a></li>
-                    <li><a href="">Men's Fashion</a></li>
-                    <li><a href="">Mobile</a></li>
-                    <li><a href="">Motorcycles</a></li>
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">Music</a></li>
-                    <li><a href="">Sports</a></li>
-                    <li><a href="">Toys</a></li>
-                    <li><a href="">Travel</a></li>
-                    <li><a href="">Women's Fashion</a></li>
-                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="ftr-copy-cntct">
+            <div class="ftr-copyright">
+                <p>&copy; Copyright 2022.<br> All rights reserved.</p>
+                <!--current year needs js-->
             </div>
-            <div class="ftr-about">
-                <h6 class="footer-hdng">ABOUT</h6>
-                <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Delivery</a></li>
-                    <li><a href="">Testimonials</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+            <div class="ftr-contact">
+                <h6 class="footer-hdng">CONTACT</h6>
+                <p>Headquarters:<br> Blvd. des Galeries, Bur 530 Québec, Québec G2K 2H6</p>
+                <p>contact@osf-global.com</p>
+                <!--will pop-up email app when clicked-->
+                <p>+1 (888) 548-4344</p>
             </div>
-            <div class="ftr-icons">
-                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17"><g><g opacity=".3"><path d="M8 6H5V4c0-.662.72-1.076 1.034-1.076h1.922V.01L5.308 0C2.368 0 2 2.61 2 4v2H0v3h2v8h3V9h3z"/></g></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"><g><g opacity=".3"><path d="M18 6.869v.765a.374.374 0 0 1-.375.371H14.91v2.687c0 .205-.168.371-.375.371h-.773a.373.373 0 0 1-.376-.37V8.005h-2.714a.374.374 0 0 1-.376-.372V6.87c0-.205.17-.372.376-.372h2.714V3.812c0-.205.168-.371.376-.371h.773c.207 0 .375.166.375.37v2.686h2.714c.206 0 .375.167.375.372zm-7.668 5.356c0 1.591-1.224 2.97-3.116 3.514A7.095 7.095 0 0 1 5.263 16a9.038 9.038 0 0 1-2.19-.26C1.741 15.41.756 14.78.297 13.967A2.245 2.245 0 0 1 0 12.855c0-.4.097-.804.287-1.204.73-1.538 2.65-2.572 4.78-2.572h.061a1.849 1.849 0 0 1-.258-.941c0-.164.022-.33.066-.5-2.233-.05-3.904-1.667-3.904-3.802C1.032 2.33 2.25.863 3.99.27A4.895 4.895 0 0 1 5.563 0h4.775c.163 0 .306.104.357.257a.367.367 0 0 1-.137.415l-1.068.765a.375.375 0 0 1-.22.07h-.383c.493.586.783 1.42.783 2.359 0 1.035-.53 2.014-1.491 2.76-.744.573-.774.73-.774 1.058.01.18.528.766 1.099 1.167 1.331.932 1.827 1.846 1.828 3.373zm-5.078 2.277c2.057 0 3.099-.701 3.099-2.084 0-.132-.016-.267-.049-.402-.138-.538-.636-.873-1.389-1.381l-.322-.219a3.673 3.673 0 0 0-1.024-.154h-.044c-1.625 0-3.051.975-3.051 2.085 0 1.209 1.22 2.155 2.78 2.155zM3.497 3.78c.185 1.398 1.216 2.606 2.25 2.638h.018c.388 0 .716-.152.971-.44.398-.449.575-1.185.47-1.97-.185-1.399-1.195-2.563-2.25-2.594h-.043c-.374 0-.706.151-.96.438-.393.444-.56 1.147-.456 1.928z"/></g></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13"><g><g opacity=".3"><path d="M16 1.54a6.554 6.554 0 0 1-1.886.516A3.29 3.29 0 0 0 15.557.24a6.596 6.596 0 0 1-2.085.797A3.283 3.283 0 0 0 7.878 4.03 9.321 9.321 0 0 1 1.11.6a3.28 3.28 0 0 0 1.016 4.382A3.27 3.27 0 0 1 .64 4.572v.042a3.285 3.285 0 0 0 2.634 3.218 3.31 3.31 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28 6.587 6.587 0 0 1-4.861 1.358 9.293 9.293 0 0 0 5.033 1.475c6.04 0 9.342-5.001 9.342-9.338 0-.143-.003-.285-.01-.425A6.65 6.65 0 0 0 16 1.54z"/></g></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16"><g><g opacity=".3"><path d="M6.894 0C2.31 0 0 3.132 0 5.743c0 1.58.628 2.987 1.975 3.51.221.087.42.004.483-.23.045-.16.15-.567.197-.737.065-.23.04-.31-.139-.512-.388-.437-.637-1.001-.637-1.802 0-2.323 1.824-4.402 4.75-4.402 2.59 0 4.013 1.508 4.013 3.522 0 2.65-1.231 4.887-3.058 4.887-1.01 0-1.764-.795-1.523-1.77.29-1.165.852-2.421.852-3.262 0-.752-.424-1.38-1.3-1.38-1.032 0-1.861 1.017-1.861 2.379 0 .868.307 1.455.307 1.455l-1.24 5.008c-.369 1.486-.056 3.308-.029 3.492.016.109.163.135.23.053.094-.119 1.323-1.564 1.74-3.008.12-.409.679-2.526.679-2.526.335.61 1.315 1.145 2.357 1.145 3.1 0 5.204-2.693 5.204-6.298C13 2.54 10.577 0 6.894 0z"/></g></g></svg>
-            </div>
-        </footer>
-    </body>
+        </div>
+        <div class="ftr-categories">
+            <h6 class="footer-hdng">CATEGORIES</h6>
+            <ul>
+                <li><a href="">Alcohol</a></li>
+                <li><a href="">Art</a></li>
+                <li><a href="">Books</a></li>
+                <li><a href="">Drink</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Jewelry</a></li>
+                <li><a href="">Kids & Baby</a></li>
+                <li><a href="">Men's Fashion</a></li>
+                <li><a href="">Mobile</a></li>
+                <li><a href="">Motorcycles</a></li>
+                <li><a href="">Movies</a></li>
+                <li><a href="">Music</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Travel</a></li>
+                <li><a href="">Women's Fashion</a></li>
+            </ul>
+        </div>
+        <div class="ftr-about">
+            <h6 class="footer-hdng">ABOUT</h6>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Delivery</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="ftr-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="17" viewBox="0 0 8 17">
+                <g>
+                    <g opacity=".3">
+                        <path
+                            d="M8 6H5V4c0-.662.72-1.076 1.034-1.076h1.922V.01L5.308 0C2.368 0 2 2.61 2 4v2H0v3h2v8h3V9h3z" />
+                    </g>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16">
+                <g>
+                    <g opacity=".3">
+                        <path
+                            d="M18 6.869v.765a.374.374 0 0 1-.375.371H14.91v2.687c0 .205-.168.371-.375.371h-.773a.373.373 0 0 1-.376-.37V8.005h-2.714a.374.374 0 0 1-.376-.372V6.87c0-.205.17-.372.376-.372h2.714V3.812c0-.205.168-.371.376-.371h.773c.207 0 .375.166.375.37v2.686h2.714c.206 0 .375.167.375.372zm-7.668 5.356c0 1.591-1.224 2.97-3.116 3.514A7.095 7.095 0 0 1 5.263 16a9.038 9.038 0 0 1-2.19-.26C1.741 15.41.756 14.78.297 13.967A2.245 2.245 0 0 1 0 12.855c0-.4.097-.804.287-1.204.73-1.538 2.65-2.572 4.78-2.572h.061a1.849 1.849 0 0 1-.258-.941c0-.164.022-.33.066-.5-2.233-.05-3.904-1.667-3.904-3.802C1.032 2.33 2.25.863 3.99.27A4.895 4.895 0 0 1 5.563 0h4.775c.163 0 .306.104.357.257a.367.367 0 0 1-.137.415l-1.068.765a.375.375 0 0 1-.22.07h-.383c.493.586.783 1.42.783 2.359 0 1.035-.53 2.014-1.491 2.76-.744.573-.774.73-.774 1.058.01.18.528.766 1.099 1.167 1.331.932 1.827 1.846 1.828 3.373zm-5.078 2.277c2.057 0 3.099-.701 3.099-2.084 0-.132-.016-.267-.049-.402-.138-.538-.636-.873-1.389-1.381l-.322-.219a3.673 3.673 0 0 0-1.024-.154h-.044c-1.625 0-3.051.975-3.051 2.085 0 1.209 1.22 2.155 2.78 2.155zM3.497 3.78c.185 1.398 1.216 2.606 2.25 2.638h.018c.388 0 .716-.152.971-.44.398-.449.575-1.185.47-1.97-.185-1.399-1.195-2.563-2.25-2.594h-.043c-.374 0-.706.151-.96.438-.393.444-.56 1.147-.456 1.928z" />
+                    </g>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13">
+                <g>
+                    <g opacity=".3">
+                        <path
+                            d="M16 1.54a6.554 6.554 0 0 1-1.886.516A3.29 3.29 0 0 0 15.557.24a6.596 6.596 0 0 1-2.085.797A3.283 3.283 0 0 0 7.878 4.03 9.321 9.321 0 0 1 1.11.6a3.28 3.28 0 0 0 1.016 4.382A3.27 3.27 0 0 1 .64 4.572v.042a3.285 3.285 0 0 0 2.634 3.218 3.31 3.31 0 0 1-1.483.056 3.286 3.286 0 0 0 3.067 2.28 6.587 6.587 0 0 1-4.861 1.358 9.293 9.293 0 0 0 5.033 1.475c6.04 0 9.342-5.001 9.342-9.338 0-.143-.003-.285-.01-.425A6.65 6.65 0 0 0 16 1.54z" />
+                    </g>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16">
+                <g>
+                    <g opacity=".3">
+                        <path
+                            d="M6.894 0C2.31 0 0 3.132 0 5.743c0 1.58.628 2.987 1.975 3.51.221.087.42.004.483-.23.045-.16.15-.567.197-.737.065-.23.04-.31-.139-.512-.388-.437-.637-1.001-.637-1.802 0-2.323 1.824-4.402 4.75-4.402 2.59 0 4.013 1.508 4.013 3.522 0 2.65-1.231 4.887-3.058 4.887-1.01 0-1.764-.795-1.523-1.77.29-1.165.852-2.421.852-3.262 0-.752-.424-1.38-1.3-1.38-1.032 0-1.861 1.017-1.861 2.379 0 .868.307 1.455.307 1.455l-1.24 5.008c-.369 1.486-.056 3.308-.029 3.492.016.109.163.135.23.053.094-.119 1.323-1.564 1.74-3.008.12-.409.679-2.526.679-2.526.335.61 1.315 1.145 2.357 1.145 3.1 0 5.204-2.693 5.204-6.298C13 2.54 10.577 0 6.894 0z" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </footer>
+
+    <script src="../bootstrap-packages/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
 </html>
-

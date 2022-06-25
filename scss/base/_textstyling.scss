@@ -33,6 +33,21 @@
     border-bottom: 2px solid $clr-lines;
 }
 
+/* --- HEADER -------------------------------- */
+
+.nav-link {
+    @include min768 {
+        font-weight: 700;
+        font-size: 14px;
+        color: $text-anthracite;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            font-size: 15px;
+            color: $clr-accent;
+        }
+    }
+}
+
 /* --- FOOTER -------------------------------- */
 
 .footer-hdng {

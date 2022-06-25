@@ -2,20 +2,38 @@ header {
     background-color: $clr-primary;
 }
 
+/* --- BOOTSTRAP OVERRIDES ------------------- */
+
+.container-fluid { //Bootstrap override
+    height: 62px;
+    background-color: $clr-primary;
+    border-bottom: 2px solid $border-beige;
+    transition: height 0.6s ease-in-out;
+    @include min768 {
+        height: 78px;
+        border: none;
+        box-shadow: rgba(153, 147, 147, 0.8) 0px 7px 29px 0px;
+        z-index: 1;
+    }
+}
+
+/* --- OSF LOGO HOME BUTTON ------------------ */
+
 .homebutton {
     position: relative;
     margin: 0 auto;
     width: 73px;
-    height: 65px;
+    height: 62px;
     a {
         position: absolute;
         left: 0;
         width: 100%;
-        height: 65px;
+        height: 62px;
         z-index: 1;
     }
     @include min768 {
         width: 170px;
+        margin: 0 5%;
     }
 }
 
@@ -23,21 +41,27 @@ header {
     position: absolute;
     left: 5px;
     width: 160px;
-    height: 65px;
+    height: 62px;
     h2 {
         display: none;
         @include min768 {
             display: block;
+            width: 160px;
         }
     }
 }
 
 .brandtitle__logo {
-    width: 63px;
-    height: 65px;
-    transition: transform 0.6s ease-in-out;
+    position: relative;
+    top: 6px;
+    width: 46px;
+    height: 46px;
+    margin:auto;
+    transition: height 0.6s ease-out;
     @include min768 {
-        transform: rotateY(360deg);
+        width: 63px;
+        height: 65px;
+        top: 0;
     }
 }
 
@@ -55,7 +79,7 @@ header {
 
 .brandtitle__Academy {
     position: relative;
-    top: -68px;
+    top: -75px;
     left: 73px;
     width: 74px;
     height: 17px;
@@ -65,28 +89,56 @@ header {
     font-weight: 400;
 }
 
-#check {
-    display: none;
-}
-
-.checkbtn {
-    cursor: pointer;
-}
-
 .toggle-btn {
     position: absolute;
     top: 12.5px;
-    left: calc(12.5px + 1%);
+    left: calc(12.5px);
     font-size: 40px;
     @include min1280 {
         display: none;
     }
-
 }
 
-nav {
-    background-color: $clr-secondary;
+.navbar-toggler {
+    border:none;
 }
+
+/* --- NAVBAR LIST --------------------------- */
+
+.navcontainer {
+    @include min768 {
+        height: calc(100% - 15px);
+        margin-top:auto
+    }
+}
+
+.navlist,
+.nav-item,
+.nav-link {
+    @include min768 {
+        height: 100%;
+    }
+}
+
+.nav-link {
+    @include min768 {
+        margin: 0 2.5px;
+        padding-top: 13px;
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            background-color: $clr-primary-dark;
+            border-bottom: 2px solid $clr-accent;
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+
 
 .nav__lv1__items,
 .nav__lv2__items,

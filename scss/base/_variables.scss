@@ -1,8 +1,9 @@
 /* --- COLORS -------------------------------- */
 
 $clr-primary      : #ffffff;
+        $clr-primary-dark   :darken($clr-primary, 4%);
 $clr-secondary    : #262a33;
-    $clr-sec-light   :lighten($clr-secondary, 7%);
+        $clr-sec-light      :lighten($clr-secondary, 7%);
 $clr-tertiary     : #f1edea;
 $clr-accent       : #84bc22;
 
@@ -20,6 +21,7 @@ $text-black       : #333333;
 $text-anthracite  : #45413e;
 $text-darkgray    : #555555;
 $text-gray        : #868380;
+$text-lightgray   : #bdc3c7;
 $text-white       : #ffffff;
 
 

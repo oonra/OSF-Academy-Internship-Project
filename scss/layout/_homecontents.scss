@@ -47,12 +47,19 @@
 
 /* --- SKILLS/ABILITIES ---------------------- */
 
-.our-skills {
+.sec-benefits {
+    background-color: $bckg-home-sec1;
+}
+
+.custom-container {
+    @extend %adjust-maxwidth;
+}
+
+.our-benefits {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-    background-color: $bckg-home-sec1;
     color: $text-white;
     
     :nth-child(2){
@@ -67,7 +74,7 @@
     }
 }
 
-.skill {
+.benefit {
     display: flex;
     justify-content: center;
     align-items: flex-start;
