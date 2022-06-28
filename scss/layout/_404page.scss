@@ -1,6 +1,10 @@
-.container-404 {
+.body-404 {
     background-color: $bckg-404;
     padding: 4vw;
+}
+
+.container-404 {
+    @extend %adjust-maxwidth;
 }
 
 .inpage-404 {
@@ -14,6 +18,7 @@
     background-color: $clr-primary;
     border-radius: 7px;
     padding: 4vw;
+    box-shadow: 0px 0px 30px 5px rgba(90, 90, 90, 0.1);
     hyphens: auto;
     transition: gap 0.6s ease-in-out;
 

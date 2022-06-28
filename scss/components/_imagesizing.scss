@@ -5,3 +5,29 @@
     @include min768 {
     }
 }
+
+.megamenuimg-mobile {
+    margin: 15% 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    width: 90%;
+    max-width: 320px;
+    transition: margin 0.2s ease-in-out;
+    @media screen and (min-width:500px) {
+        margin: 38px 0;
+    }
+    @include min768 {
+        display: none;
+    }
+}
+
+.megamenuimg-wide {
+    display: none;
+    @include min950 {
+        display: block;
+        margin-left: 24px;
+        padding-top: 10px;
+    }
+}

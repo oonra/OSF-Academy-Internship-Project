@@ -1,20 +1,24 @@
 .nav__dropbtn-1 {
-    margin: 0 5px;
+    margin: 0;
     border: none;
     border-radius: 0;
-    padding-top: 12px;
-    padding-bottom: 30px;
-    font-weight: 700;
+    padding: 15px calc(99% - 90.6px) 15px calc(15px + 1%);      //pd-right here is to prevent the button from overflowing 
+    font-weight: 700;                                           //the page full-width, which would cause a side-scrolling.
     font-size: 14px;
-    color: $text-anthracite;
-    transition: all 0.2s ease-in-out;
-    
-    &:hover {
-        margin: 0 2.5px;
-        padding-bottom: 28px;
-        font-size: 15px;
-        background-color: $clr-secondary;
-        color: $text-white;
+    @extend %megadropmenu-linkcoloring;
+
+    @include min768 {
+        margin: 0 5px;
+        padding: 12px 12px 30px 12px;
+        color: $text-anthracite;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            margin: 0 2.5px;
+            padding-bottom: 28px;
+            font-size: 15px;
+            background-color: $clr-secondary;
+            color: $text-white;
+        }
     }
 }
 

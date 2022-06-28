@@ -7,107 +7,153 @@
         
         <title>404 - OSF Academy</title>
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="../css/globalstyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!-- Toggle btn -->
+        <link rel="stylesheet" href="../css/globalbootstrap.css"> <!-- Bootstrap NPM -->
+        <link rel="stylesheet" href="../css/globalstyles.css"> <!-- Custom SCSS -->
     </head>
     <body>
         <header>
-            <div class="toggle">
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <span class="material-symbols-outlined icon toggle-btn">menu</span>
-                </label>
-            </div>
-            <div class="homebutton">
-                <a href="homepage.html"></a>
-                <div class="brandtitle">
-                    <img src="../images/header/OSF-logo.png" alt="OSF Academy" class="brandtitle__logo">
-                    <h2 class="brandtitle__OSF">OSF</h2>
-                    <h2 class="brandtitle__Academy">Academy</h2>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav__lv1">
-                    <li><a href="404page.html" class="nav__lv1__items">SERVICES</a></li>
-                        <ul class="nav__lv2">
-                            <li><a href="404page.html" class="nav__lv2__items">PRODUCT CATEGORIES</a></li>
-                                <ul class="nav__lv3">
-                                    <li><a href="404page.html" class="nav__lv3__items">Accesories</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Alcohol</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Art</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Books</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Drinks</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Electronics</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Flowers & Plants</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Food</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Gadgets</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Garden</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Grocery</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Home</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Jewelry</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Kids & Baby</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Men's Fashion</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Mobile</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Motorcycles</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Movies</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Music</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Office</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Pets</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Romantic</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Sports</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Toys</a></li>
-                                </ul>
-                            <li><a href="#" class="nav__lv2__items">SALE</a></li>
-                                <ul>
-                                    <li><a href="404page.html" class="nav__lv3__items">Accesories</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Alcohol</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Art</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Books</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Drinks</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Electronics</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Flowers & Plants</a></li>
-                                    <li><a href="404page.html" class="nav__lv3__items">Food</a></li>
-                                </ul>
+            <nav class="navbar navbar-expand-md p-0">
+                <div class="container-fluid headercontainer">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="material-symbols-outlined icon toggle-btn">menu</span>
+                    </button> <!-- /.navbar-toggler button -->
+    
+                    <div class="homebutton">
+                        <a href="homepage.html"></a>
+                        <div class="brandtitle">
+                            <img src="../images/header/OSF-logo.png" alt="OSF Academy" class="brandtitle__logo">
+                            <h2 class="brandtitle__OSF">OSF</h2>
+                            <h2 class="brandtitle__Academy">Academy</h2>
+                        </div>
+                    </div> <!-- /.homebutton -->
+    
+                    <div class="collapse navbar-collapse navcontainer" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0 navlist">
+                            <li class="nav-item">
+                                <div class="dropdown position-static">
+                                    <button class="btn nav__dropbtn-1 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</button>
+                                    <ul class="dropdown-menu w-100 ddmenu1" aria-labelledby="dropdownMenuButton1">
+                                        <div class="d-flex flex-column flex-md-row justify-content-md-center py-md-5">
+                                            <div class="megamenu-divs">
+                                                <li><p class="dropdown-item megamenu-title" href="#">PRODUCT CATEGORIES</p></li>
+                                                <div class="megamenu-categories d-flex flex-column flex-md-row justify-content-md-around">
+                                                    <div>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Accesories</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Alcohol</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Art</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Books</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Drinks</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Electronics</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Flowers & Plants</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Food</a></li>
+                                                    </div>
+                                                    <div>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Gadgets</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Garden</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Grocery</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Home</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Jewelry</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Kids & Baby</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Men's Fashion</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Mobile</a></li>
+                                                    </div>
+                                                    <div>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Motorcycles</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Movies</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Music</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Office</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Pets</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Romantic</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Sports</a></li>
+                                                        <li><a href="404page.html" class="dropdown-item megamenu-link">Toys</a></li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="megamenu-divs">
+                                                <li><p class="dropdown-item megamenu-title" href="#">SALE</p></li>
+                                                <div class="megamenu-categories d-flex flex-column">
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Accesories</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Alcohol</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Art</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Books</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Drinks</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Electronics</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Flowers & Plants</a></li>
+                                                    <li><a href="404page.html" class="dropdown-item megamenu-link">Food</a></li>
+                                                </div>
+                                            </div>
+                                            <div class="megamenu-divs">
+                                                <li><img class="img-fluid megamenuimg-wide" src="../images/header/megamenu-catalogimg.png" alt="A women wearing a white dress laying on the floor"></li>
+                                            </div>
+                                        </div> <!-- /.d-flex (container)-->
+                                    </ul> <!-- /.ddmenu1 -->
+                                </div> <!-- /.dropdown -->
+                            </li> <!-- /.nav-item -->
+                            <li class="nav-item"><a class="nav-link" href="#">COMPANY</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">LIBRARY</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+                            <li class="nav-item"><img class="img-fluid megamenuimg-mobile" src="../images/header/megamenu-catalogimg.png" alt="A women wearing a white dress laying on the floor"></li>
+                            <li class="nav-item lang-and-currency">
+                                <div class="dropdown">
+                                    <button class="btn nav__dropbtn-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
+                                    <ul class="dropdown-menu ddmenu2" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">ES</a></li>
+                                        <li><a class="dropdown-item" href="#">DE</a></li>
+                                        <li><a class="dropdown-item" href="#">TR</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item lang-and-currency">
+                                <div class="dropdown">
+                                    <button class="btn nav__dropbtn-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">&#36;USD</button>
+                                    <ul class="dropdown-menu ddmenu2" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">&#128;EUR</a></li>
+                                        <li><a class="dropdown-item" href="#">&#163;GBP</a></li>
+                                        <li><a class="dropdown-item" href="#">&#165;YEN</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
-                    <li><a href="404page.html" class="nav__lv1__items">COMPANY</a></li>
-                    <li><a href="404page.html" class="nav__lv1__items">LIBRARY</a></li>
-                    <li><a href="404page.html" class="nav__lv1__items">CONTACT US</a></li>
-                </ul>
+    
+                    </div> <!-- /.navbar-collapse -->
+                </div> <!-- container-fluid -->
             </nav>
-            <div class="header__icons">
-                
-            </div>
         </header>
 
         <main>
-            <div class="container-404">
-                <div class="inpage-nav">
-                    <p>
-                        <a href="homepage.html">Home</a>
-                        <span class="inpage-nav__slash">/</span>
-                        404
-                    </p>
-                </div>
-                <div class="inpage-title">
-                        <div><div class="inpage-title__border"></div></div>
-                        <h1>404</h1>
-                        <div><div class="inpage-title__border"></div></div>
-                </div>
-                <div class="inpage-404">
-                    <div class="p404__ooopstext">
-                        <h3>Oops!</h3>
+            <div class="body-404">
+                <div class="container-404">
+                    <div class="inpage-nav">
+                        <p>
+                            <a href="homepage.html">Home</a>
+                            <span class="inpage-nav__slash">/</span>
+                            404
+                        </p>
                     </div>
-                    <div class="p404__sorrytext">
-                        <h4>Sorry, this page could not be found!</h4>
-                        <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-
-                        <div class="p404__sorrytext__goback">
-                            <a href="homepage.html">Go back to Homepage</a>
+                    <div class="inpage-title">
+                            <div><div class="inpage-title__border"></div></div>
+                            <h1>404</h1>
+                            <div><div class="inpage-title__border"></div></div>
+                    </div>
+                    <div class="inpage-404">
+                        <div class="p404__ooopstext">
+                            <h3>Oops!</h3>
                         </div>
+                        <div class="p404__sorrytext">
+                            <h4>Sorry, this page could not be found!</h4>
+                            <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 
-                        <h4>Search our site</h4>
-                        <p>There will be a search bar here one day......</p>
+                            <div class="p404__sorrytext__goback">
+                                <a href="homepage.html">Go back to Homepage</a>
+                            </div>
+
+                            <h4>Search our site</h4>
+                            <p>There will be a search bar here one day......</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,5 +209,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16"><g><g opacity=".3"><path d="M6.894 0C2.31 0 0 3.132 0 5.743c0 1.58.628 2.987 1.975 3.51.221.087.42.004.483-.23.045-.16.15-.567.197-.737.065-.23.04-.31-.139-.512-.388-.437-.637-1.001-.637-1.802 0-2.323 1.824-4.402 4.75-4.402 2.59 0 4.013 1.508 4.013 3.522 0 2.65-1.231 4.887-3.058 4.887-1.01 0-1.764-.795-1.523-1.77.29-1.165.852-2.421.852-3.262 0-.752-.424-1.38-1.3-1.38-1.032 0-1.861 1.017-1.861 2.379 0 .868.307 1.455.307 1.455l-1.24 5.008c-.369 1.486-.056 3.308-.029 3.492.016.109.163.135.23.053.094-.119 1.323-1.564 1.74-3.008.12-.409.679-2.526.679-2.526.335.61 1.315 1.145 2.357 1.145 3.1 0 5.204-2.693 5.204-6.298C13 2.54 10.577 0 6.894 0z"/></g></g></svg>
             </div>
         </footer>
+
+        <script src="../bootstrap-packages/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> <!-- Bootstrap NPM -->
     </body>
 </html>

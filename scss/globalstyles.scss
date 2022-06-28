@@ -1,21 +1,5 @@
-// "xl" breakpoint of Bootstrap is adjusted from min-width:120px to min-width:1280px below.
+// custom scss imports
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1280px,
-  xxl: 1400px
-) ;
-
-// Other styling overrides on Bootstrap classes are indicated inside the corresponding 
-// selectors in the custom scss files.
-
-
-// scss imports
-
-@import "../bootstrap-packages/node_modules/bootstrap/scss/bootstrap.scss";
 @import "base/0index";
 @import "components/0index";
 @import "layout/0index";
