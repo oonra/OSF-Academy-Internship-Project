@@ -4,6 +4,17 @@
     font-family: $Lato;
 }
 
+a {
+    text-decoration: none;
+    color: $clr-accent;
+    transition: color 0.1s ease-in-out;
+    &:hover,
+    &:active  {
+        color: $clr-secondary;
+        text-decoration: solid;
+    }
+}
+
 /* --- INPAGE -------------------------------- */
 
 .inpage-nav {
@@ -44,7 +55,8 @@
         font-size: 14px;
         color: $text-anthracite;
         transition: all 0.2s ease-in-out;
-        &:hover {
+        &:hover,
+        &:active  {
             font-size: 15px;
             color: $clr-accent;
         }
@@ -58,19 +70,19 @@
     font-size: 13px;
 }
 
-footer p,
-footer li {
+.ftr p,
+.ftr li {
     font-weight: 400;
     font-size: 13px;
     list-style-type: none;
 }
 
-footer a {
-    padding: 1rem auto;
+.ftr a {
     color: $text-anthracite;
     text-decoration: none;
     transition: color 0.1s ease-in-out;
-    &:hover {
+    &:hover,
+    &:active  {
         color: $clr-accent;
     }
 }
@@ -93,6 +105,16 @@ footer a {
         font-weight: 400;
         font-size: 24px;
         color: $text-white;
+    }
+}
+
+.carousel-sidebar__contact__texts {
+    text-align: center;
+    h6 {
+        font-size: 17px;
+    }
+    p {
+        font-size: 14px;
     }
 }
 
@@ -140,15 +162,6 @@ footer a {
 }
 
 /* --- 404 PAGE ------------------------------ */
-
-.body-404 a {
-    text-decoration: none;
-    color: $clr-accent;
-    transition: color 0.1s ease-in-out;
-    &:hover {
-        color: $clr-secondary;
-    }
-}
 
 .p404__ooopstext > h3 {
     font-size: 5rem;

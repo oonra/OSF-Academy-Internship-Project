@@ -175,6 +175,22 @@ header {
     };
 }
 
+.navicon-li {
+    display: none;
+    @include min768 {
+        display: block;
+        margin-left: 0.5vw;
+    }
+}
+
+.navicon-btn {
+    padding: 5px;
+    transition: font-size 0.2s ease-in-out;
+    &:hover {
+        font-size: 8px;
+    }
+}
+
 /* --- DROPDOWN MENU ------------------------- */
 
 .dropdown-menu {                    //Bootstrap override

@@ -1,3 +1,44 @@
+.btn {                  //Bootstrap override
+    &:focus,
+    &:active {
+    outline: none !important;
+    box-shadow: none !important;
+    }
+}
+
+.my-btn {
+    margin: 1rem;
+    border: 2px solid $border-beige;
+    border-radius: 30px;
+    padding: 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.facebook-btn {
+    border-color: #3a5b96;
+    color: #3a5b96;
+    font-size: 14px;
+    &:hover,
+    &:active  {
+        background-color: #3a5b96;
+        color: $text-white;
+    }
+    
+}
+
+.view-more-btn{
+    border-color: $text-white;
+    color: $text-white;
+    margin: 0;
+    &:hover,
+    &:active {
+        border-color: $clr-accent;
+        background-color: $clr-accent;
+        color: $text-white;
+    }
+}
+
 .nav__dropbtn-1 {
     margin: 0;
     border: none;
@@ -12,7 +53,8 @@
         padding: 12px 12px 30px 12px;
         color: $text-anthracite;
         transition: all 0.2s ease-in-out;
-        &:hover {
+        &:hover,
+        &:active  {
             margin: 0 2.5px;
             padding-bottom: 28px;
             font-size: 15px;
@@ -26,14 +68,14 @@
     margin: 0 5.5px;
     border: none;
     border-radius: 0;
-    padding-top: 12px;
-    padding-bottom: 30px;
+    padding: 12px 6px 30px 6px;
     font-weight: 700;
     font-size: 14px;
     color: $text-lightgray;
     transition: all 0.2s ease-in-out;
     
-    &:hover {
+    &:hover,
+    &:active  {
         margin: 0 2.5px;
         padding-bottom: 28px;
         font-size: 15px;

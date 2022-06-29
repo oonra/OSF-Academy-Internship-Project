@@ -56,7 +56,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center right;
+    object-position: center right;      //Adjusted so that the right sides of the imgs will be displayed when width is narrowed in mobile.
+                                        //Not necessary, though. It just fits these imgs better.
 }
 
 .swiper-pagination {                    //Pagination height
@@ -82,16 +83,31 @@
     margin-top: 1rem;
     width: 90%;
     z-index: 1;
-    background-color: #fff;
 }
 
+/* 
+    The reason there are two containers that hold the texts inside is to prevent the text from dispersing
+    too much inside the slide area. ".inslide-texts" maintains the easy reading by keeping the text area narrow.
+*/
+
 .inslide-texts {
-    background-color: red;
     width: 90%;
     max-width: 700px;
+    p {
+        margin-bottom: 1.5rem;
+        @include min768 {
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+        }
+        @include min1280 {
+            margin-bottom: 4rem;
+        }
+    }
 }
 
 /* --- CAROUSEL SIDEBAR ---------------------- */
+
+// I probably could have done the carousel section easier by using grid instead of flexbox. :/ 
 
 .carousel-sidebar {
     flex-grow: 1;
@@ -126,20 +142,21 @@
 }
 
 .carousel-sidebar__discount__texts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @extend %center-the-div;
+}
+
+.carousel-sidebar__contact__texts {
+    @extend %center-the-div;
+    min-width: 200px;
 }
 
 .carousel-sidebar__contact {
     flex-grow: 1;
     position: relative;
     border-radius: 5px;
-    background-color: $clr-primary-dark;
     min-width: 180px;
     width: 100%;
-    text-align: center;
+    min-height: 150px;
 }
 
 /* --- BANNER OSF THEME ---------------------- */
@@ -158,10 +175,7 @@
 }
 
 .sec-banner__texts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @extend %center-the-div;
     width: 80%;
 }
 

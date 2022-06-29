@@ -99,6 +99,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">LIBRARY</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
                         <li class="nav-item"><img class="img-fluid megamenuimg-mobile" src="../images/header/megamenu-catalogimg.png" alt="A women wearing a white dress laying on the floor"></li>
+                        
                         <li class="nav-item lang-and-currency">
                             <div class="dropdown">
                                 <button class="btn nav__dropbtn-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
@@ -119,12 +120,32 @@
                                 </ul>
                             </div>
                         </li>
-                    </ul>
 
+                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Search_Information._Attribute_as_Designmodo_from_Flaticon.com.svg" alt="Search button"></button></li>
+                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn" data-bs-toggle="modal" data-bs-target="#signInModal"><img src="../images/icons/headericons/Profile_User_Outline._Attribute_as_Situ_Herrera_from_Flaticon.com.svg" alt="Login button"></button></li>
+                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Heart_Outline_Rounded_Shape._Attribute_as_Freepik_from_Flaticon.com.svg" alt="Favorites button"></button></li>
+                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.svg" alt="Cart button"></button></li>
+                    </ul>
                 </div> <!-- /.navbar-collapse -->
             </div> <!-- container-fluid -->
         </nav>
     </header>
+
+    <div id="signInModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Sign in</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Sign in form</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <sec class="sec-carousel">
@@ -138,7 +159,7 @@
                                     <div class="inslide-texts">
                                         <h1>Control and manage any device with cloud solutions<br></h1>
                                         <p>Improve business performance and the user experience with the right mix of IoT technology and processes</p>
-                                        <p>View more</p>
+                                        <a href="#" class="my-btn view-more-btn">VIEW MORE</a>
                                     </div>
                                 </div>
                                 <div class="image-wrapper"><img src="../images/homepage/carousel/Layer_3.png" alt="A woman wearing a white dress laying on the floor"></div>
@@ -148,7 +169,7 @@
                                     <div class="inslide-texts">
                                         <h1>Control and manage any device with cloud solutions<br></h1>
                                         <p>Improve business performance and the user experience with the right mix of IoT technology and processes</p>
-                                        <p>View more</p>
+                                        <a href="#" class="my-btn view-more-btn">VIEW MORE</a>
                                     </div>
                                 </div>
                                 <div class="image-wrapper"><img src="../images/homepage/carousel/Layer_4.png" alt="People working on their computers at a workspace"></div>
@@ -158,7 +179,7 @@
                                     <div class="inslide-texts">
                                         <h1>Control and manage any device with cloud solutions<br></h1>
                                         <p>Improve business performance and the user experience with the right mix of IoT technology and processes</p>
-                                        <p>View more</p>
+                                        <a href="#" class="my-btn view-more-btn">VIEW MORE</a>
                                     </div>
                                 </div>
                                 <div class="image-wrapper"><img src="../images/homepage/carousel/Layer_5.png" alt="Skyline photo of a city, looking from under a bridge"></div>
@@ -180,7 +201,7 @@
                         <div class="carousel-sidebar__contact__texts">
                             <h6>Follow us on Facebook</h6>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit </p>
-                            <h6>FACEBOOK</h6>
+                            <a href="https://www.facebook.com" class="my-btn facebook-btn"><span class="mx-2"><img src="../images/homepage/carousel/f.svg" alt="Facebook"></span>   FOLLOW</a>
                         </div>
                     </div>
                 </div>
@@ -234,52 +255,66 @@
     </main>
 
     <footer>
-        <div class="ftr-copy-cntct">
+        <div class="ftr">
+        <div class="ftr_copy-cntct">
             <div class="ftr-copyright">
                 <p>&copy; Copyright 2022.<br> All rights reserved.</p>
                 <!--current year needs js-->
             </div>
             <div class="ftr-contact">
                 <h6 class="footer-hdng">CONTACT</h6>
-                <p>Headquarters:<br> Blvd. des Galeries, Bur 530 Québec, Québec G2K 2H6</p>
+                <p>Headquarters:<br> Blvd. des Galeries, Bur 530<br> Québec, Québec G2K 2H6</p>
                 <p>contact@osf-global.com</p>
                 <!--will pop-up email app when clicked-->
                 <p>+1 (888) 548-4344</p>
             </div>
         </div>
-        <div class="ftr-categories">
-            <h6 class="footer-hdng">CATEGORIES</h6>
-            <ul>
-                <li><a href="">Alcohol</a></li>
-                <li><a href="">Art</a></li>
-                <li><a href="">Books</a></li>
-                <li><a href="">Drink</a></li>
-                <li><a href="">Electronics</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Jewelry</a></li>
-                <li><a href="">Kids & Baby</a></li>
-                <li><a href="">Men's Fashion</a></li>
-                <li><a href="">Mobile</a></li>
-                <li><a href="">Motorcycles</a></li>
-                <li><a href="">Movies</a></li>
-                <li><a href="">Music</a></li>
-                <li><a href="">Sports</a></li>
-                <li><a href="">Toys</a></li>
-                <li><a href="">Travel</a></li>
-                <li><a href="">Women's Fashion</a></li>
-            </ul>
+        <div class="ftr__links">
+            <div class="ftr__links__categories">
+                <h6 class="footer-hdng">CATEGORIES</h6>
+                <ul>
+                    <div>
+                        <li><a href="">Alcohol</a></li>
+                        <li><a href="">Art</a></li>
+                        <li><a href="">Books</a></li>
+                        <li><a href="">Drink</a></li>
+                        <li><a href="">Electronics</a></li>
+                    </div>
+                    <div>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Jewelry</a></li>
+                        <li><a href="">Kids & Baby</a></li>
+                        <li><a href="">Men's Fashion</a></li>
+                        <li><a href="">Mobile</a></li>
+                        <li><a href="">Motorcycles</a></li>
+                        <li><a href="">Movies</a></li>
+                        <li><a href="">Music</a></li>
+                    </div>
+                    <div>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">Toys</a></li>
+                        <li><a href="">Travel</a></li>
+                        <li><a href="">Women's Fashion</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="ftr__links__about">
+                <h6 class="footer-hdng">ABOUT</h6>
+                <ul>
+                    <div>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Delivery</a></li>
+                        <li><a href="">Testimonials</a></li>
+                        <li><a href="">Contact</a></li>
+                    </div>
+                </ul>
+            </div>
         </div>
-        <div class="ftr-about">
-            <h6 class="footer-hdng">ABOUT</h6>
-            <ul>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Delivery</a></li>
-                <li><a href="">Testimonials</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div class="ftr-icons">
-
+        <div class="ftr__icons">
+            <span><a href="https://www.facebook.com/" class="ftr__icons__links"><img src="../images/icons/socialmedias/f.svg" alt="Facebook"></a></span>
+            <span><a href="https://www.google.com/" class="ftr__icons__links"><img src="../images/icons/socialmedias/g+.svg" alt="Google+"></a></span>
+            <span><a href="https://www.twitter.com/" class="ftr__icons__links"><img src="../images/icons/socialmedias/t.svg" alt="Twitter"></a></span>
+            <span><a href="https://www.pinterest.com/" class="ftr__icons__links"><img src="../images/icons/socialmedias/p.svg" alt="Pinterest"></a></span>
         </div>
     </footer>
 

@@ -339,6 +339,16 @@ template {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #84bc22;
+  transition: color 0.1s ease-in-out;
+}
+a:hover, a:active {
+  color: #262a33;
+  text-decoration: solid;
+}
+
 /* --- INPAGE -------------------------------- */
 .inpage-nav {
   margin: 1.5rem 1rem auto 1rem;
@@ -378,7 +388,7 @@ template {
     color: #45413e;
     transition: all 0.2s ease-in-out;
   }
-  .nav-link:hover {
+  .nav-link:hover, .nav-link:active {
     font-size: 15px;
     color: #84bc22;
   }
@@ -390,20 +400,19 @@ template {
   font-size: 13px;
 }
 
-footer p,
-footer li {
+.ftr p,
+.ftr li {
   font-weight: 400;
   font-size: 13px;
   list-style-type: none;
 }
 
-footer a {
-  padding: 1rem auto;
+.ftr a {
   color: #45413e;
   text-decoration: none;
   transition: color 0.1s ease-in-out;
 }
-footer a:hover {
+.ftr a:hover, .ftr a:active {
   color: #84bc22;
 }
 
@@ -423,6 +432,16 @@ footer a:hover {
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
+}
+
+.carousel-sidebar__contact__texts {
+  text-align: center;
+}
+.carousel-sidebar__contact__texts h6 {
+  font-size: 17px;
+}
+.carousel-sidebar__contact__texts p {
+  font-size: 14px;
 }
 
 .sec-banner__texts {
@@ -477,15 +496,6 @@ footer a:hover {
 }
 
 /* --- 404 PAGE ------------------------------ */
-.body-404 a {
-  text-decoration: none;
-  color: #84bc22;
-  transition: color 0.1s ease-in-out;
-}
-.body-404 a:hover {
-  color: #262a33;
-}
-
 .p404__ooopstext > h3 {
   font-size: 5rem;
   font-weight: 900;
@@ -513,10 +523,17 @@ footer a:hover {
   color: #555555;
 }
 
-.custom-container, .sec-carousel__container, .container-404, .headercontainer {
+.custom-container, .sec-carousel__container, .container-404, .ftr, .headercontainer {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.sec-banner__texts, .carousel-sidebar__contact__texts, .carousel-sidebar__discount__texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ddmenu1 a, .nav-link, .nav__dropbtn-1 {
@@ -526,6 +543,41 @@ footer a:hover {
 .ddmenu1 a:hover, .nav-link:hover, .nav__dropbtn-1:hover {
   background-color: #353b47;
   color: #84bc22;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.my-btn {
+  margin: 1rem;
+  border: 2px solid #e8e2d6;
+  border-radius: 30px;
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.facebook-btn {
+  border-color: #3a5b96;
+  color: #3a5b96;
+  font-size: 14px;
+}
+.facebook-btn:hover, .facebook-btn:active {
+  background-color: #3a5b96;
+  color: #ffffff;
+}
+
+.view-more-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+  margin: 0;
+}
+.view-more-btn:hover, .view-more-btn:active {
+  border-color: #84bc22;
+  background-color: #84bc22;
+  color: #ffffff;
 }
 
 .nav__dropbtn-1 {
@@ -543,7 +595,7 @@ footer a:hover {
     color: #45413e;
     transition: all 0.2s ease-in-out;
   }
-  .nav__dropbtn-1:hover {
+  .nav__dropbtn-1:hover, .nav__dropbtn-1:active {
     margin: 0 2.5px;
     padding-bottom: 28px;
     font-size: 15px;
@@ -556,14 +608,13 @@ footer a:hover {
   margin: 0 5.5px;
   border: none;
   border-radius: 0;
-  padding-top: 12px;
-  padding-bottom: 30px;
+  padding: 12px 6px 30px 6px;
   font-weight: 700;
   font-size: 14px;
   color: #bdc3c7;
   transition: all 0.2s ease-in-out;
 }
-.nav__dropbtn-2:hover {
+.nav__dropbtn-2:hover, .nav__dropbtn-2:active {
   margin: 0 2.5px;
   padding-bottom: 28px;
   font-size: 15px;
@@ -799,6 +850,24 @@ header {
   }
 }
 
+.navicon-li {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navicon-li {
+    display: block;
+    margin-left: 0.5vw;
+  }
+}
+
+.navicon-btn {
+  padding: 5px;
+  transition: font-size 0.2s ease-in-out;
+}
+.navicon-btn:hover {
+  font-size: 8px;
+}
+
 /* --- DROPDOWN MENU ------------------------- */
 .dropdown-menu {
   margin-top: 0;
@@ -906,38 +975,78 @@ header {
   }
 }
 
-footer {
+.ftr {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+  margin: 1rem auto;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: calc(1rem + 1%);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
-  footer {
+  .ftr {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 3rem auto;
+    padding: 0;
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .ftr {
+    max-width: 1400px;
   }
 }
 
-footer > div,
 .ftr-copyright {
   margin-bottom: 1.75rem;
 }
 
-footer ul {
+.ftr__links {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  gap: 0.5rem;
-  margin: 1rem auto;
+  gap: 6vw;
 }
 @media screen and (min-width: 768px) {
-  footer ul {
-    height: 200px;
-    flex-wrap: wrap;
+  .ftr__links {
+    flex-direction: row;
   }
+}
+
+.ftr ul {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .ftr ul {
+    flex-direction: row;
+    gap: 6vw;
+  }
+}
+
+.ftr li {
+  margin-bottom: 0.75rem;
+}
+
+.ftr__icons span {
+  margin: 0 1px;
+}
+
+.ftr__icons__links {
+  padding: 0.5rem;
+}
+.ftr__icons__links:hover, .ftr__icons__links:active {
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.ftr__icons__links img {
+  width: 19.5px;
+  height: 19.5px;
 }
 
 .body-404 {
@@ -1072,13 +1181,29 @@ footer ul {
   margin-top: 1rem;
   width: 90%;
   z-index: 1;
-  background-color: #fff;
 }
 
+/* 
+    The reason there are two containers that hold the texts inside is to prevent the text from dispersing
+    too much inside the slide area. ".inslide-texts" maintains the easy reading by keeping the text area narrow.
+*/
 .inslide-texts {
-  background-color: red;
   width: 90%;
   max-width: 700px;
+}
+.inslide-texts p {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .inslide-texts p {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .inslide-texts p {
+    margin-bottom: 4rem;
+  }
 }
 
 /* --- CAROUSEL SIDEBAR ---------------------- */
@@ -1117,21 +1242,17 @@ footer ul {
   background-position-y: 162px;
 }
 
-.carousel-sidebar__discount__texts {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.carousel-sidebar__contact__texts {
+  min-width: 200px;
 }
 
 .carousel-sidebar__contact {
   flex-grow: 1;
   position: relative;
   border-radius: 5px;
-  background-color: whitesmoke;
   min-width: 180px;
   width: 100%;
-  text-align: center;
+  min-height: 150px;
 }
 
 /* --- BANNER OSF THEME ---------------------- */
@@ -1149,10 +1270,6 @@ footer ul {
 }
 
 .sec-banner__texts {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
 }
 

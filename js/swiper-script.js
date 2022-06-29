@@ -13,7 +13,7 @@ const swiper = new Swiper(".swiper", {
         clickable       : true,
     },
     autoplay: {
-        delay           : 1000,     //Auto transitions to next slide after 10 sec
+        delay           : 10000,     //Auto transitions to next slide after 10 sec
     },
     direction       : "horizontal",
     effect          : "slide",
@@ -42,14 +42,11 @@ function next() {
 /* --- Aligning the texts inside image slides --- */
 /* ---------------------------------------------- */
 
-const container = document.getElementsByClassName("inslide-texts-container");
 const texts     = document.getElementsByClassName("inslide-texts");
-
+const margins   = ["16px 0 0 0", "16px auto 0 auto", "16px 0 0 auto"]
 const alignings = ["left", "center", "right"];
 
 for (let i=0 ; i<texts.length ; i++) {
     texts[i].style.textAlign        = alignings[i];
-    container[i].style.alignItems   = alignings[i];
+    texts[i].style.margin           = margins[i];
 };
-
-console.log(texts);

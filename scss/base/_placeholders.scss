@@ -4,6 +4,13 @@
     margin-right: auto;
 }
 
+%center-the-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 %megadropmenu-linkcoloring {
     color: $text-white;
     transition: all 0.2s ease-in-out;
