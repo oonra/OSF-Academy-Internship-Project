@@ -328,7 +328,7 @@ template {
     - Default "lg" breakpoint of Bootstrap has been changed from min-width:992px to min-width:950px.
     - Default "md" breakpoint of Bootstrap was already assigned to min-width:768px by default.
 
-    These changes have been made inside the main scss file of the project, "../globalstyles.scss",
+    These changes have been made inside the main scss file of the project, "../globalbootstrap.scss",
     where all of bootstrap and scss files in the project are imported to.
     ---------------------------------------------------------------------------------------------------
 */
@@ -416,6 +416,17 @@ a:hover, a:active {
   color: #84bc22;
 }
 
+/* --- LOGIN MODAL --------------------------- */
+.modal-header {
+  text-align: center;
+  border: none;
+}
+
+.modal-title {
+  margin: auto;
+  font-weight: 900;
+}
+
 /* --- HOMEPAGE SECTIONS --------------------- */
 .carousel-sidebar__discount__texts h1 {
   margin-top: 0;
@@ -442,6 +453,17 @@ a:hover, a:active {
 }
 .carousel-sidebar__contact__texts p {
   font-size: 14px;
+}
+
+.populars-title h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  transition: font-size 0.6s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .populars-title h1 {
+    font-size: 3rem;
+  }
 }
 
 .sec-banner__texts {
@@ -523,7 +545,20 @@ a:hover, a:active {
   color: #555555;
 }
 
-.custom-container, .sec-carousel__container, .container-404, .ftr, .headercontainer {
+/* --- PRODUCT DETAILED PAGE ----------------- */
+.product-details__info h3 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #45413e;
+}
+.product-details__info p {
+  color: #555555;
+}
+.product-details__info span {
+  color: #bdc3c7;
+}
+
+.custom-container, .sec-wrapper, .sec-carousel__container, .container-404, .ftr, .headercontainer {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -545,6 +580,24 @@ a:hover, a:active {
   color: #84bc22;
 }
 
+.socialmedia-icons span {
+  margin: 0 1px;
+}
+
+.socialmedia-icons__links {
+  padding: 0.5rem;
+}
+.socialmedia-icons__links:hover, .socialmedia-icons__links:active {
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.socialmedia-icons__links img {
+  width: 19.5px;
+  height: 19.5px;
+}
+
+/* --- GLOBAL -------------------------------- */
 .btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none !important;
@@ -569,17 +622,7 @@ a:hover, a:active {
   color: #ffffff;
 }
 
-.view-more-btn {
-  border-color: #ffffff;
-  color: #ffffff;
-  margin: 0;
-}
-.view-more-btn:hover, .view-more-btn:active {
-  border-color: #84bc22;
-  background-color: #84bc22;
-  color: #ffffff;
-}
-
+/* --- HEADER -------------------------------- */
 .nav__dropbtn-1 {
   margin: 0;
   border: none;
@@ -620,6 +663,75 @@ a:hover, a:active {
   font-size: 15px;
   background-color: whitesmoke;
   color: #262a33;
+}
+
+/* --- HOME PAGE ----------------------------- */
+.productcard-hover-btns {
+  display: inline-block;
+  margin: 0 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease-in-out;
+}
+.productcard-hover-btns:hover, .productcard-hover-btns:active {
+  background-color: #353b47;
+}
+
+.view-more-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+  margin: 0;
+}
+.view-more-btn:hover, .view-more-btn:active {
+  border-color: #84bc22;
+  background-color: #84bc22;
+  color: #ffffff;
+}
+
+/* --- PRODUCT PAGE -------------------------- */
+.choosecolor-btn {
+  margin: 0;
+  padding: 5.5px 32px;
+  color: #555555;
+}
+
+.add-cart-btn {
+  margin-left: 0;
+  background-color: #84bc22;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.add-cart-btn:hover, .add-cart-btn:active {
+  border-color: #84bc22;
+  background-color: #ffffff;
+  color: #84bc22;
+}
+
+.tab-btns {
+  border: none;
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem 3%;
+  background-color: #ffffff;
+  color: #868380;
+  font-weight: 700;
+  font-size: 14px;
+}
+@media screen and (min-width: 550px) {
+  .tab-btns {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tab-btns {
+    font-size: 24px;
+  }
+}
+
+.active {
+  background-color: #262a33;
+  color: #ffffff;
 }
 
 .cover-banner {
@@ -1032,23 +1144,6 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.ftr__icons span {
-  margin: 0 1px;
-}
-
-.ftr__icons__links {
-  padding: 0.5rem;
-}
-.ftr__icons__links:hover, .ftr__icons__links:active {
-  background-color: whitesmoke;
-  border-radius: 50%;
-}
-
-.ftr__icons__links img {
-  width: 19.5px;
-  height: 19.5px;
-}
-
 .body-404 {
   background-color: #f1edea;
   padding: 4vw;
@@ -1117,18 +1212,17 @@ header {
   }
 }
 
-.swiper-container {
+.sec-carousel__container > .swiper-container {
   flex-grow: 1;
   display: grid;
   place-items: center;
 }
 @media screen and (min-width: 768px) {
-  .swiper-container {
+  .sec-carousel__container > .swiper-container {
     min-height: 300px;
   }
 }
-
-.swiper {
+.sec-carousel__container > .swiper-container .swiper {
   border-radius: 7.5px;
   width: 100%;
   max-width: 1171px;
@@ -1136,8 +1230,7 @@ header {
   max-height: 505px;
   z-index: 0;
 }
-
-.swiper-slide {
+.sec-carousel__container > .swiper-container .swiper-slide {
   width: 100%;
   height: 100%;
 }
@@ -1255,6 +1348,57 @@ header {
   min-height: 150px;
 }
 
+.sec-popular-items {
+  background-color: #262a33;
+  padding: 2rem;
+}
+
+.populars-title .inpage-title__border {
+  border-color: #555555;
+}
+
+.card-frame {
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  border-radius: 7.5px;
+  min-width: 270px;
+  max-width: 360px;
+  min-height: 360px;
+  max-height: 480px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.product-card-onHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7.5px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(27, 216, 175, 0.8), rgba(25, 184, 78, 0.8));
+  transform: translateY(200%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-frame {
+  position: relative;
+  overflow: hidden;
+}
+.card-frame:hover .product-card-onHover {
+  transform: translateY(0%);
+}
+
+.load-more-div {
+  text-align: center;
+}
+
 /* --- BANNER OSF THEME ---------------------- */
 .sec-banner {
   position: relative;
@@ -1273,7 +1417,7 @@ header {
   width: 80%;
 }
 
-/* --- SKILLS/ABILITIES ---------------------- */
+/* --- BENEFITS --------------------------- */
 .sec-benefits {
   background-color: #45413e;
 }
@@ -1325,6 +1469,145 @@ header {
   .benefit {
     margin: 3.25rem 2rem;
   }
+}
+
+.product-details-frame {
+  background-color: #ffffff;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 950px) {
+  .product-details {
+    flex-direction: row;
+  }
+}
+
+.productinfo-ddown {
+  margin-top: 0;
+  border-radius: 7.5px;
+  background-color: #f1edea;
+}
+.productinfo-ddown span {
+  margin-right: 1rem;
+}
+.productinfo-ddown a {
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+.productinfo-ddown a:hover, .productinfo-ddown a:active {
+  background-color: #ffffff;
+}
+
+.product-details__info__share {
+  margin: 1rem 0;
+}
+
+.productpage-popularitems {
+  margin-top: 4rem;
+}
+.productpage-popularitems h1 {
+  font-size: 2rem;
+}
+
+/* --- PRODUCT GALLERY ----------------------- */
+.product-details__imgs {
+  display: flex;
+  gap: 3vw;
+}
+
+.gallery-display {
+  width: 60vw;
+  max-width: 500px;
+  height: 60vw;
+  max-height: 500px;
+  z-index: 0;
+}
+@media screen and (min-width: 768px) {
+  .gallery-display {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+.gallery-display .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-display .swiper-slide img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .gallery-display .swiper-slide img {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+.gallery-thumbs {
+  max-height: 350px;
+  z-index: 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #a2a09e;
+}
+.gallery-thumbs .swiper-slide img {
+  width: 12vw;
+  height: 12vw;
+}
+@media screen and (min-width: 768px) {
+  .gallery-thumbs .swiper-slide img {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+.gallery-thumbs .swiper-slide-active {
+  border: 2px solid #84bc22;
+}
+
+/* --- TABS ---------------------------------- */
+.product-details__descriptions {
+  margin-top: 10rem;
+}
+
+.product-desc-tabs {
+  margin: 0 auto;
+  border: none;
+}
+
+.tab-content {
+  background-color: #262a33;
+  color: #ffffff;
+}
+
+.tab-texts {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .tab-texts {
+    flex-direction: row;
+    padding: 2rem;
+  }
+}
+
+.tab-texts p {
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=globalstyles.css.map */

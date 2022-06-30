@@ -49,23 +49,3 @@
 .ftr li {
     margin-bottom: 0.75rem;
 }
-
-
-
-.ftr__icons span {
-    margin: 0 1px;
-}
-
-.ftr__icons__links {
-    padding: 0.5rem;
-    &:hover,
-    &:active  {
-        background-color: $clr-primary-dark;
-        border-radius: 50%;
-    }
-}
-
-.ftr__icons__links img {
-    width: 19.5px;
-    height: 19.5px;
-}

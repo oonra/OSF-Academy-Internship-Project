@@ -8,7 +8,7 @@
     - Default "lg" breakpoint of Bootstrap has been changed from min-width:992px to min-width:950px.
     - Default "md" breakpoint of Bootstrap was already assigned to min-width:768px by default.
 
-    These changes have been made inside the main scss file of the project, "../globalstyles.scss",
+    These changes have been made inside the main scss file of the project, "../globalbootstrap.scss",
     where all of bootstrap and scss files in the project are imported to.
     ---------------------------------------------------------------------------------------------------
 */

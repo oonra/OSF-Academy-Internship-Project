@@ -1,0 +1,17 @@
+.socialmedia-icons span {
+    margin: 0 1px;
+}
+
+.socialmedia-icons__links {
+    padding: 0.5rem;
+    &:hover,
+    &:active  {
+        background-color: $clr-primary-dark;
+        border-radius: 50%;
+    }
+}
+
+.socialmedia-icons__links img {
+    width: 19.5px;
+    height: 19.5px;
+}

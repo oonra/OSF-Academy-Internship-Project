@@ -1,0 +1,133 @@
+.product-details-frame {
+    background-color: $clr-primary;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    @include min950 {
+        flex-direction: row;
+    }
+}
+
+.productinfo-ddown {
+    margin-top: 0;
+    border-radius: 7.5px;
+    background-color: $bckg-404;
+    span {
+        margin-right: 1rem;
+    }
+    a {
+        font-size: 14px;
+        transition: background-color 0.2s ease-in-out;
+        &:hover,
+        &:active {
+            background-color: $clr-primary;
+        }
+    }
+}
+
+.product-details__info__share {
+    margin: 1rem 0;
+}
+
+
+
+.productpage-popularitems {
+    margin-top: 4rem;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* --- PRODUCT GALLERY ----------------------- */
+
+.product-details__imgs {
+    display: flex;
+    gap: 3vw;
+}
+
+.gallery-display {
+    width: 60vw;
+    max-width: 500px;
+    height: 60vw;
+    max-height: 500px;
+    z-index: 0;
+    @include min768 {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+  
+.gallery-display .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        display: block;
+        width: 60vw;
+        height: 60vw;
+        object-fit: cover;
+        @include min768 {
+            width: 30vw;
+            height: 30vw;
+        }
+    }
+}
+
+.gallery-thumbs {
+    max-height: 350px;
+    z-index: 0;
+}
+  
+.gallery-thumbs .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid $border-gray;
+    img {
+        width: 12vw;
+        height: 12vw;
+        @include min768 {
+            width: 6vw;
+            height: 6vw;
+    }
+    }
+}
+
+.gallery-thumbs .swiper-slide-active {
+    border: 2px solid $clr-accent;
+}
+
+/* --- TABS ---------------------------------- */
+
+.product-details__descriptions {
+    margin-top: 10rem;
+}
+
+.product-desc-tabs {
+    margin: 0 auto;
+    border: none;
+}
+
+.tab-content {
+    background-color: $clr-secondary;
+    color: $text-white;
+}
+
+.tab-texts {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    @include min768 {
+        flex-direction: row;
+        padding: 2rem;
+    }
+}
+
+.tab-texts p {
+    margin: 1rem;
+}

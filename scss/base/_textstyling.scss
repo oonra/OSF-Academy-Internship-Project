@@ -87,6 +87,18 @@ a {
     }
 }
 
+/* --- LOGIN MODAL --------------------------- */
+
+.modal-header {
+    text-align: center;
+    border: none;
+}
+
+.modal-title {
+    margin: auto;
+    font-weight: 900;
+}
+
 /* --- HOMEPAGE SECTIONS --------------------- */
 
 .carousel-sidebar__discount__texts {
@@ -115,6 +127,17 @@ a {
     }
     p {
         font-size: 14px;
+    }
+}
+
+.populars-title {
+    h1{
+        font-size: 2rem;
+        color: $text-white;
+        transition: font-size 0.6s ease-in-out;
+        @include min768 {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -185,4 +208,20 @@ a {
 
 .p404__sorrytext > p {
     color: $text-darkgray;
+}
+
+/* --- PRODUCT DETAILED PAGE ----------------- */
+
+.product-details__info {
+    h3 {
+        font-weight: 900;
+        font-size: 3rem;
+        color: $text-anthracite;
+    }
+    p {
+        color: $text-darkgray;
+    }
+    span {
+        color: $text-lightgray;
+    }
 }
