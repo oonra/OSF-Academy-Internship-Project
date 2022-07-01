@@ -29,10 +29,12 @@ function incrementCart() {
     document.getElementById("cart-amount").innerHTML = insideCart;
   
     if (insideCart >= 10) {
-        amountCart.style.right    = "2px";
+        amountCart.style.right    = "1px";
+        amountCart.style.fontSize = "10px";
     }
     if (insideCart >= 100) {
-        amountCart.style.right    = "0.5px";
+        amountWish.style.top    = "1px";
+        amountCart.style.right    = "0px";
         amountCart.style.fontSize = "8px";
     }
 }
@@ -46,9 +48,11 @@ function incrementWish() {
     document.getElementById("wish-amount").innerHTML = insideWish;
 
     if (insideWish >= 10) {
-        amountWish.style.right    = "2px";
+        amountWish.style.right    = "1px";
+        amountWish.style.fontSize = "10px";
     }
     if (insideWish >= 100) {
+        amountWish.style.top    = "1px";
         amountWish.style.right    = "0.5px";
         amountWish.style.fontSize = "8px";
     }
