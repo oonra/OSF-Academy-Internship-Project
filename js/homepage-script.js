@@ -65,6 +65,7 @@ function printCard(data) {
                             <button class="productcard-hover-btns add-cart" onclick="incrementCart()"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></button>
                             <button class="productcard-hover-btns add-wish" onclick="incrementWish()"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></button>
                         </div>
+                        <a href="productpage.html" class="productcard-hover-link">GO TO PRODUCT PAGE</a>
                     </div>
                     <img src="${data[i].image}" class="card-img-top product-img" alt="Product Image">
                     <div class="card-body">
