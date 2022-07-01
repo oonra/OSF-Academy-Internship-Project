@@ -1,12 +1,9 @@
-/* --- Swiper.js customizations --- */
-/* -------------------------------- */
+/* --------------------------------------------------------------- */
+/* --- Carousel slide customizations ----------------------------- */
+/* --------------------------------------------------------------- */
 
 
 const swiper = new Swiper(".swiper", {
-    navigation: {
-        prevEl          : ".swiper-button-prev",
-        nextEl          : ".swiper-button-next"
-    },
     pagination: {
         el              : ".swiper-pagination",
         type            : "bullets",
@@ -30,23 +27,20 @@ const swiper = new Swiper(".swiper", {
 */
 
 function next() {
-  if (data[swiper.realIndex + 1]) {
-    swiper.slideNext(1000)
-  } else {
-    swiper.slideToLoop(1000)
-  }
+    if (data[swiper.realIndex + 1]) {
+        swiper.slideNext(1000)
+    } else {
+        swiper.slideToLoop(1000)
+    }
 };
 
-
-
-/* --- Aligning the texts inside image slides --- */
-/* ---------------------------------------------- */
+/* --- Aligning the texts inside image slides -------------------- */
 
 const texts     = document.getElementsByClassName("inslide-texts");
 const margins   = ["16px 0 0 0", "16px auto 0 auto", "16px 0 0 auto"]
 const alignings = ["left", "center", "right"];
 
 for (let i=0 ; i<texts.length ; i++) {
-    texts[i].style.textAlign        = alignings[i];
-    texts[i].style.margin           = margins[i];
+    texts[i].style.textAlign  = alignings[i];
+    texts[i].style.margin     = margins[i];
 };

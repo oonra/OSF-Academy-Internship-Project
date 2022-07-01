@@ -1,4 +1,54 @@
-.model-dialog {
-    width: 500px;
-    height: 450px;
+.model-content {
+    border-radius: 7.5px !important;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-title {
+    margin: 1rem auto;
+}
+
+.modal-body {
+    padding: 2rem 3rem;
+}
+
+.text-input {
+    margin: 0.5rem 0;
+    height: 40px;
+    width: 100%;
+    border: 2px solid $text-lightgray;
+    border-radius: 25px;
+    padding: 4px 16px;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 2rem 3rem;
+}
+
+#show-password-icon {
+    display: none;
+}
+
+#show-password-img {
+    position: absolute;
+    top: 150px;
+    right: 65px;
+    cursor: pointer;
+}
+
+#show-password-img::before {
+    border-radius: 50%;
+    padding: 30px;
+    background-color: $clr-primary-dark;
+}
+
+:checked + #show-password-img::before {
+    border-radius: 50%;
+    padding: 30px;
+    background-color: $clr-primary-dark;
 }

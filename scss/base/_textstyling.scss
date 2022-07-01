@@ -91,15 +91,47 @@ a {
 
 .modal-header {
     text-align: center;
-    border: none;
 }
 
 .modal-title {
-    margin: auto;
     font-weight: 900;
 }
 
+.modal-body {
+    text-align: left;
+}
+
+.form-texts {
+    font-size: 14px;
+}
+
+.form-links {
+    font-size: 12px;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
 /* --- HOMEPAGE SECTIONS --------------------- */
+
+.inslide-texts-container { //Texts themselves
+    color: $text-white;
+    h1 {
+        font-family: $Myriad-Pro;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    p {
+        font-family: $Lato;
+        font-weight: 400;
+        font-size: 1rem;
+        @include min768 {
+            padding-top: 3rem;
+        }
+    }
+}
 
 .carousel-sidebar__discount__texts {
     h1 {
@@ -141,6 +173,22 @@ a {
     }
 }
 
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: $text-gray;
+}
+
+.card-text {
+    font-weight: 900;
+    font-size: 18px;
+    color: $clr-secondary;
+}
+
 .sec-banner__texts {
     color: $text-white;  
     h1 {
@@ -166,23 +214,7 @@ a {
     }
 }
 
-.inslide-texts-container { //Texts themselves
-    color: $text-white;
-    h1 {
-        font-family: $Myriad-Pro;
-        font-weight: 700;
-        font-size: 3rem;
-        line-height: 3rem;
-    }
-    p {
-        font-family: $Lato;
-        font-weight: 400;
-        font-size: 1rem;
-        @include min768 {
-            padding-top: 3rem;
-        }
-    }
-}
+
 
 /* --- 404 PAGE ------------------------------ */
 

@@ -123,8 +123,18 @@
 
                         <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Search_Information._Attribute_as_Designmodo_from_Flaticon.com.svg" alt="Search button"></button></li>
                         <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn" data-bs-toggle="modal" data-bs-target="#signInModal"><img src="../images/icons/headericons/Profile_User_Outline._Attribute_as_Situ_Herrera_from_Flaticon.com.svg" alt="Login button"></button></li>
-                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Heart_Outline_Rounded_Shape._Attribute_as_Freepik_from_Flaticon.com.svg" alt="Favorites button"></button></li>
-                        <li class="nav-item navicon-li"><button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.svg" alt="Cart button"></button></li>
+                        <li class="nav-item navicon-li">
+                            <button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Heart_Outline_Rounded_Shape._Attribute_as_Freepik_from_Flaticon.com.svg" alt="Favorites button"></button>
+                            <div class="navicon-li__indicator">
+                                <p id="wish-amount">0</p>
+                            </div>
+                        </li>
+                        <li class="nav-item navicon-li">
+                            <button type="button" class="btn navicon-btn"><img src="../images/icons/headericons/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.svg" alt="Cart button"></button>
+                            <div class="navicon-li__indicator">
+                                <p id="cart-amount">0</p>
+                            </div>
+                        </li>
                     </ul>
                 </div> <!-- /.navbar-collapse -->
             </div> <!-- container-fluid -->
@@ -132,16 +142,25 @@
     </header>
 
     <div id="signInModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-frame modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title">Sign in</h1>
                 </div>
                 <div class="modal-body">
-                    <p>Sign in form</p>
+                    <form>
+                        <label class="form-texts" for="email">E-mail</label><br>
+                        <input class="text-input" type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="10"><br>
+                        <label class="form-texts" for="password">Password</label><br>
+                        <input class="text-input" type="password" id="password" name="password">
+                        <label id="show-password-img" for="show-password-icon"><img src="../images/icons/Eye_Shape_Variant._Attribute_as_Amit_Jakhu_from_Flaticon.com.svg" alt="Toggle password"></label>
+                        <input id="show-password-icon" type="checkbox" onclick="showPassword()"><br>
+                        <a href="javascript:void(0)" class="form-links" style="text-align:right">Forgot password?</a>
+                      </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input class="submit-btn my-btn" type="submit" value="Submit">
+                    <a href="javascript:void(0)" class="form-links">I don't have an account</a>
                 </div>
             </div>
         </div>
@@ -218,142 +237,13 @@
                 </div>
 
                 <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-3 card-frame m-2">
-                            <div class="card product-card">
-                                <div class="product-card-onHover">
-                                    <div>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-cart"><img src="../images/homepage/product-images/icons/Plus_(24x24).svg" alt=""></a>
-                                        <a href="javascript:void(0)" class="productcard-hover-btns add-wishlist"><img src="../images/homepage/product-images/icons/Heart_(24x24).svg" alt=""></a>
-                                    </div>
-                                </div>
-                                    <img src="../images/homepage/product-images/2.png" class="card-img-top product-img" alt="Product Image">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product Name</h5>
-                                        <p class="card-text">Price</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="row" id="cardRow">
+                        <!-- Items will be injected via JSON files using AJAX method. -->
                     </div>
                 </div>
 
                 <div class="load-more-div">
-                    <button type="button" class="my-btn load-more-btn">LOAD MORE</button>
+                    <button type="button" id="btnLoadMore" class="my-btn load-more-btn">LOAD MORE   <span><img src="../images/icons/loadmore.svg" alt="Load More"></span></button>
                 </div>
             </div>
         </section>
@@ -424,27 +314,27 @@
                 <h6 class="footer-hdng">CATEGORIES</h6>
                 <ul>
                     <div>
-                        <li><a href="">Alcohol</a></li>
-                        <li><a href="">Art</a></li>
-                        <li><a href="">Books</a></li>
-                        <li><a href="">Drink</a></li>
-                        <li><a href="">Electronics</a></li>
+                        <li><a href="404page.html">Alcohol</a></li>
+                        <li><a href="404page.html">Art</a></li>
+                        <li><a href="404page.html">Books</a></li>
+                        <li><a href="404page.html">Drink</a></li>
+                        <li><a href="404page.html">Electronics</a></li>
                     </div>
                     <div>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Jewelry</a></li>
-                        <li><a href="">Kids & Baby</a></li>
-                        <li><a href="">Men's Fashion</a></li>
-                        <li><a href="">Mobile</a></li>
-                        <li><a href="">Motorcycles</a></li>
-                        <li><a href="">Movies</a></li>
-                        <li><a href="">Music</a></li>
+                        <li><a href="404page.html">Home</a></li>
+                        <li><a href="404page.html">Jewelry</a></li>
+                        <li><a href="404page.html">Kids & Baby</a></li>
+                        <li><a href="404page.html">Men's Fashion</a></li>
+                        <li><a href="404page.html">Mobile</a></li>
+                        <li><a href="404page.html">Motorcycles</a></li>
+                        <li><a href="404page.html">Movies</a></li>
+                        <li><a href="404page.html">Music</a></li>
                     </div>
                     <div>
-                        <li><a href="">Sports</a></li>
-                        <li><a href="">Toys</a></li>
-                        <li><a href="">Travel</a></li>
-                        <li><a href="">Women's Fashion</a></li>
+                        <li><a href="404page.html">Sports</a></li>
+                        <li><a href="404page.html">Toys</a></li>
+                        <li><a href="404page.html">Travel</a></li>
+                        <li><a href="404page.html">Women's Fashion</a></li>
                     </div>
                 </ul>
             </div>
@@ -452,10 +342,10 @@
                 <h6 class="footer-hdng">ABOUT</h6>
                 <ul>
                     <div>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Delivery</a></li>
-                        <li><a href="">Testimonials</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="404page.html">About Us</a></li>
+                        <li><a href="404page.html">Delivery</a></li>
+                        <li><a href="404page.html">Testimonials</a></li>
+                        <li><a href="404page.html">Contact</a></li>
                     </div>
                 </ul>
             </div>
@@ -470,7 +360,9 @@
 
     <script src="../bootstrap-packages/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> <!-- Bootstrap NPM -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper.js CSN -->
-    <script src="../js/swiper-script.js"></script> <!-- Customizations on Swiper.js -->
+    <script src="../js/global-script.js"></script>
+    <script src="../js/homepage-script.js"></script>
+    <script src="../js/homepage-carousel-script.js"></script> <!-- Swiper.js customizations for carousel slide -->
 </body>
 
 </html>

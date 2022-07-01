@@ -1,21 +1,28 @@
 .product-details-frame {
+    border-radius: 7.5px;
     background-color: $clr-primary;
+    box-shadow: 0px 0px 30px 5px rgba(90, 90, 90, 0.1);
 }
 
 .product-details {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     padding: 2rem;
+    @include min768 {
+        padding: 3rem 4rem;
+    }
     @include min950 {
         flex-direction: row;
     }
 }
 
 .productinfo-ddown {
-    margin-top: 0;
-    border-radius: 7.5px;
-    background-color: $bckg-404;
+    margin-top: -2px;
+    border: 2px solid $border-beige;
+    border-radius: 0;
+    padding: 0;
+    background-color: $clr-primary;
     span {
         margin-right: 1rem;
     }
@@ -24,7 +31,7 @@
         transition: background-color 0.2s ease-in-out;
         &:hover,
         &:active {
-            background-color: $clr-primary;
+            background-color: $clr-primary-dark;
         }
     }
 }
@@ -42,22 +49,27 @@
     }
 }
 
+#moreText {
+    display: none; //Will change to display:block when read more button is clicked.
+}
+
 /* --- PRODUCT GALLERY ----------------------- */
 
 .product-details__imgs {
     display: flex;
-    gap: 3vw;
+    justify-content: center;
+    z-index: 0;
 }
 
 .gallery-display {
+    border: 3px solid $border-gray;
     width: 60vw;
-    max-width: 500px;
-    height: 60vw;
-    max-height: 500px;
+    height: calc(60vw + 6px);
     z-index: 0;
-    @include min768 {
+    @include min950 {
+        margin: 0 auto;
         width: 30vw;
-        height: 30vw;
+        height: calc(30vw + 6px);
     }
 }
   
@@ -65,47 +77,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
     img {
         display: block;
         width: 60vw;
         height: 60vw;
         object-fit: cover;
-        @include min768 {
+        z-index: 0;
+        @include min950 {
             width: 30vw;
             height: 30vw;
         }
     }
 }
 
-.gallery-thumbs {
-    max-height: 350px;
-    z-index: 0;
-}
-  
-.gallery-thumbs .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid $border-gray;
-    img {
-        width: 12vw;
-        height: 12vw;
-        @include min768 {
-            width: 6vw;
-            height: 6vw;
-    }
-    }
-}
-
-.gallery-thumbs .swiper-slide-active {
-    border: 2px solid $clr-accent;
-}
-
 /* --- TABS ---------------------------------- */
 
 .product-details__descriptions {
     margin-top: 10rem;
+    nav {
+        margin: 0 auto;
+    }
 }
 
 .product-desc-tabs {

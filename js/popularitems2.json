@@ -1,0 +1,42 @@
+[
+    {
+        "name"  : "Product 9",
+        "price" : 90,
+        "image" : "../images/homepage/product-images/3.png"
+    },
+    {
+        "name"  : "Product 10",
+        "price" : 100,
+        "image" : "../images/homepage/product-images/4.png"
+    },
+    {
+        "name"  : "Product 11",
+        "price" : 110,
+        "image" : "../images/homepage/product-images/5.png"
+    },
+    {
+        "name"  : "Product 12",
+        "price" : 120,
+        "image" : "../images/homepage/product-images/6.png"
+    },
+    {
+        "name"  : "Product 13",
+        "price" : 130,
+        "image" : "../images/homepage/product-images/1.png"
+    },
+    {
+        "name"  : "Product 14",
+        "price" : 140,
+        "image" : "../images/homepage/product-images/2.png"
+    },
+    {
+        "name"  : "Product 15",
+        "price" : 150,
+        "image" : "../images/homepage/product-images/3.png"
+    },
+    {
+        "name"  : "Product 16",
+        "price" : 160,
+        "image" : "../images/homepage/product-images/4.png"
+    }
+]

@@ -1,6 +1,6 @@
 header {
     background-color: $clr-primary;
-    z-index: 5;
+    z-index: 10;
 }
 
 .headercontainer {
@@ -40,7 +40,7 @@ header {
     }
     @include min768 {
         width: 260px;
-        margin: 0 5%;
+        margin: 0 5% 0 2.5%;
     }
 }
 
@@ -129,7 +129,7 @@ header {
 .navlist {
     @include min768 {
         margin-left: auto;
-        margin-right: 0;
+        margin-right: 2rem !important;
     }
 }
 
@@ -177,9 +177,10 @@ header {
 
 .navicon-li {
     display: none;
+    position: relative;
     @include min768 {
         display: block;
-        margin-left: 0.5vw;
+        margin-left: 0.75vw;
     }
 }
 
@@ -188,6 +189,27 @@ header {
     transition: font-size 0.2s ease-in-out;
     &:hover {
         font-size: 8px;
+    }
+}
+
+.navicon-li__indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid $clr-accent;
+    border-radius: 50%;
+    padding: 6.5px;
+    background-color: $clr-primary;
+    p {
+        position: absolute;
+        top: 1.5px;
+        right: 4px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 9px;
+        color: $clr-accent;
     }
 }
 
@@ -239,6 +261,7 @@ header {
 }
 
 .ddmenu2 {
+    padding: 0;
     background-color: $clr-primary-dark;
     .dropdown-item {
         color: $clr-secondary;
